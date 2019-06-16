@@ -1,31 +1,54 @@
 package by.vsu.sdo.exchange;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientSide {
-    public String ipServer;
+    public final static String IP_SERVER = "127.0.0.1" ;
     public final static int DEFAULT_PORT = 4444;
     public int port;
     Socket connection;
-
-    public boolean Connection(String ipServer, int port){
+    private Socket Connection(){
         try {
-            connection = new Socket(ipServer,port);
-            return true;
+            this.connection = new Socket(IP_SERVER,DEFAULT_PORT);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Host is not correct");
-            return false;
         }
+        return this.connection;
+    }
+    private void SendToServer(){
 
     }
-    public boolean Connection(String ipServer){
-         return Connection(ipServer,DEFAULT_PORT);
+    public void CreateNewLobby(){
+      Connection();
+        DataOutputStream SendToServer  = new DataOutputStream(connection.getOutputStream());
+
+// Send first message
+        dOut.writeByte(1);
+        dOut.writeUTF("This is the first type of message.");
+        dOut.flush(); // Send off the data
+
+// Send the second message
+        dOut.writeByte(2);
+        dOut.writeUTF("This is the second type of message.");
+        dOut.flush(); // Send off the data
+
+// Send the third message
+        dOut.writeByte(3);
+        dOut.writeUTF("This is the third type of message (Part 1).");
+        dOut.writeUTF("This is the third type of message (Part 2).");
+        dOut.flush(); // Send off the data
+
+// Send the exit message
+        dOut.writeByte(-1);
+        dOut.flush();
+
+        dOut.close();
+    }
+
+    public void ConnectToLobby(){
+
     }
     public void SendToServer(int mas[]) throws IOException {
     BufferedReader in  = new

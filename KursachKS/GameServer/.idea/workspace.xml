@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GameClient/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/exchange/ClientSide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/checkers/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/target/classes/by/vsu/sdo/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/target/classes/by/vsu/sdo/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Application.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/exchange/ClientSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/exchange/ClientSide.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,15 +137,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560708701086</updated>
-      <workItem from="1560708703892" duration="547000" />
+      <workItem from="1560708703892" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="547000" />
+    <option name="totallyTimeSpent" value="1148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />

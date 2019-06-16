@@ -3,19 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d8dd8379-6d87-4c12-840b-84f2c3d95864" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GameServer/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GameServer/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GameServer/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GameServer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GameServer/Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Client.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameServer/target/classes/META-INF/Application.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,12 +61,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -294,7 +292,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560687067036</updated>
-      <workItem from="1560687070578" duration="22123000" />
+      <workItem from="1560687070578" duration="23776000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1560693683164</created>
@@ -335,7 +333,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22123000" />
+    <option name="totallyTimeSpent" value="23776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -475,15 +473,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -492,12 +490,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="306">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
