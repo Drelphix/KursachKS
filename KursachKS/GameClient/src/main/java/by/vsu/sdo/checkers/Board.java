@@ -10,6 +10,7 @@ public class Board extends JFrame {
     public final static String BLACK_CHECKER = "./src/main/java/by/vsu/sdo/checkers/resourses/black.png";
     public final static String WHITE_QUEEN = "./src/main/java/by/vsu/sdo/checkers/resourses/white_queen.png";
     public final static String BLACK_QUEEN = "./src/main/java/by/vsu/sdo/checkers/resourses/black_queen.png";
+
     JLayeredPane layeredPane;
     JPanel chessBoard;
     JLabel chessPiece;
@@ -40,7 +41,7 @@ public class Board extends JFrame {
         }
     }
     public void DrawBoard(){
-        JFrame frame = new ChessBoard();
+        JFrame frame = new Board();
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
@@ -64,9 +65,35 @@ public class Board extends JFrame {
                 else break loop;
                 JPanel panel = (JPanel) chessBoard.getComponent(j);
                 panel.add(this.chessPiece);
-
             }
         }
-        checkersUpdate.revalidate();
     }
+
+    @Override
+    public JLayeredPane getLayeredPane() {
+        return layeredPane;
+    }
+
+    @Override
+    public void setLayeredPane(JLayeredPane layeredPane) {
+        this.layeredPane = layeredPane;
+    }
+
+    public JPanel getChessBoard() {
+        return chessBoard;
+    }
+
+    public void setChessBoard(JPanel chessBoard) {
+        this.chessBoard = chessBoard;
+    }
+
+    public JLabel getChessPiece() {
+        return chessPiece;
+    }
+
+    public void setChessPiece(JLabel chessPiece) {
+        this.chessPiece = chessPiece;
+    }
+
+
 }
