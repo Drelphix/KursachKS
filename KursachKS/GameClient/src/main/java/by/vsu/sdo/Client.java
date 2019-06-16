@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-
+/*
             System.out.println("Welcome to Client side");
             System.out.println("Please input server ip");
     Scanner input = new Scanner(System.in);
@@ -37,6 +37,6 @@ public class Client {
             in.close();
             input.close();
             inu.close();
-            fromserver.close();
-}
+            fromserver.close();}*/
+
 }

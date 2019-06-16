@@ -1,3 +1,5 @@
+package by.vsu.sdo.checkers;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -47,23 +49,7 @@ public class ChessBoard extends JFrame implements MouseListener, MouseMotionList
 
         }
     }
-        public void PutCheckers (int[] mas){
-    JLabel piece;
-        for (int i:mas){
-            for (int j:mas){
-                if (mas[j]==1){
-                    piece = new JLabel(new ImageIcon(WHITE_CHECKER));
-                }   else if (mas[j]==2){
-                    piece = new JLabel(new ImageIcon(BLACK_CHECKER));
-                } else piece = null;
-                JPanel panel = (JPanel) chessBoard.getComponent(j);
-                panel.add(piece);
-                }
-            }
-        }
-
-
-    public static void main(String[] args) {
+    public void DrawBoard(){
         JFrame frame = new ChessBoard();
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         frame.pack();
@@ -71,6 +57,27 @@ public class ChessBoard extends JFrame implements MouseListener, MouseMotionList
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+        public void PutCheckers (int[] mas){
+            JLabel piece;
+            for (int i=0;i<8;i++){
+                loop:
+                for (int j=0;j<8;j++){
+                    if (mas[j]==1){
+                        piece = new JLabel(new ImageIcon(WHITE_CHECKER));
+                    }   else if (mas[j]==2){
+                        piece = new JLabel(new ImageIcon(BLACK_CHECKER));
+                    } else if(mas[j]==3){
+                        piece = new JLabel(new ImageIcon(WHITE_QUEEN));
+                    } else if(mas[j]==4) {
+                        piece = new JLabel(new ImageIcon(BLACK_QUEEN));
+                    }
+                    else break loop;
+                    JPanel panel = (JPanel) chessBoard.getComponent(j);
+                    panel.add(piece);
+                }
+            }
+        }
+
 
     public void mousePressed(MouseEvent e) {
         chessPiece = null;
