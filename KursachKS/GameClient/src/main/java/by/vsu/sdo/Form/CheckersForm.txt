@@ -1,0 +1,308 @@
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
+import javafx.scene.control.MenuItem;
+import javafx.scene.image.ImageView;
+
+public class PleaseProvideControllerClassName {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private MenuItem NewGame;
+
+    @FXML
+    private MenuItem CheckersTerminate;
+
+    @FXML
+    private MenuItem HideHS;
+
+    @FXML
+    private MenuItem ShowHS;
+
+    @FXML
+    private ImageView R1C1;
+
+    @FXML
+    private ImageView R1C2;
+
+    @FXML
+    private ImageView R1C3;
+
+    @FXML
+    private ImageView R1C4;
+
+    @FXML
+    private ImageView R1C5;
+
+    @FXML
+    private ImageView R1C6;
+
+    @FXML
+    private ImageView R1C7;
+
+    @FXML
+    private ImageView R1C8;
+
+    @FXML
+    private ImageView R2C1;
+
+    @FXML
+    private ImageView R2C2;
+
+    @FXML
+    private ImageView R2C3;
+
+    @FXML
+    private ImageView R2C4;
+
+    @FXML
+    private ImageView R2C5;
+
+    @FXML
+    private ImageView R2C6;
+
+    @FXML
+    private ImageView R2C7;
+
+    @FXML
+    private ImageView R2C8;
+
+    @FXML
+    private ImageView R3C1;
+
+    @FXML
+    private ImageView R3C2;
+
+    @FXML
+    private ImageView R3C3;
+
+    @FXML
+    private ImageView R3C4;
+
+    @FXML
+    private ImageView R3C5;
+
+    @FXML
+    private ImageView R3C6;
+
+    @FXML
+    private ImageView R3C7;
+
+    @FXML
+    private ImageView R3C8;
+
+    @FXML
+    private ImageView R4C1;
+
+    @FXML
+    private ImageView R4C2;
+
+    @FXML
+    private ImageView R4C3;
+
+    @FXML
+    private ImageView R4C4;
+
+    @FXML
+    private ImageView R4C5;
+
+    @FXML
+    private ImageView R4C6;
+
+    @FXML
+    private ImageView R4C7;
+
+    @FXML
+    private ImageView R4C8;
+
+    @FXML
+    private ImageView R5C1;
+
+    @FXML
+    private ImageView R5C2;
+
+    @FXML
+    private ImageView R5C3;
+
+    @FXML
+    private ImageView R5C4;
+
+    @FXML
+    private ImageView R5C5;
+
+    @FXML
+    private ImageView R5C6;
+
+    @FXML
+    private ImageView R5C7;
+
+    @FXML
+    private ImageView R5C8;
+
+    @FXML
+    private ImageView R6C1;
+
+    @FXML
+    private ImageView R6C;
+
+    @FXML
+    private ImageView R6C4;
+
+    @FXML
+    private ImageView R6C5;
+
+    @FXML
+    private ImageView R6C6;
+
+    @FXML
+    private ImageView R6C7;
+
+    @FXML
+    private ImageView R6C8;
+
+    @FXML
+    private ImageView R7C1;
+
+    @FXML
+    private ImageView R7C2;
+
+    @FXML
+    private ImageView R7C3;
+
+    @FXML
+    private ImageView R7C4;
+
+    @FXML
+    private ImageView R7C5;
+
+    @FXML
+    private ImageView R7C6;
+
+    @FXML
+    private ImageView R7C7;
+
+    @FXML
+    private ImageView R7C8;
+
+    @FXML
+    private ImageView R8C1;
+
+    @FXML
+    private ImageView R8C2;
+
+    @FXML
+    private ImageView R8C3;
+
+    @FXML
+    private ImageView R8C4;
+
+    @FXML
+    private ImageView R8C5;
+
+    @FXML
+    private ImageView R8C6;
+
+    @FXML
+    private ImageView R8C7;
+
+    @FXML
+    private ImageView R8C8;
+
+    @FXML
+    private ListView<?> HistorySteps;
+
+    @FXML
+    void HideHS(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ShowHS(ActionEvent event) {
+
+    }
+
+    @FXML
+    void StartNewGame(ActionEvent event) {
+
+    }
+
+    @FXML
+    void initialize() {
+        assert NewGame != null : "fx:id=\"NewGame\" was not injected: check your FXML file 'Untitled'.";
+        assert CheckersTerminate != null : "fx:id=\"CheckersTerminate\" was not injected: check your FXML file 'Untitled'.";
+        assert HideHS != null : "fx:id=\"HideHS\" was not injected: check your FXML file 'Untitled'.";
+        assert ShowHS != null : "fx:id=\"ShowHS\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C1 != null : "fx:id=\"R1C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C2 != null : "fx:id=\"R1C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C3 != null : "fx:id=\"R1C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C4 != null : "fx:id=\"R1C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C5 != null : "fx:id=\"R1C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C6 != null : "fx:id=\"R1C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C7 != null : "fx:id=\"R1C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R1C8 != null : "fx:id=\"R1C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C1 != null : "fx:id=\"R2C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C2 != null : "fx:id=\"R2C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C3 != null : "fx:id=\"R2C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C4 != null : "fx:id=\"R2C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C5 != null : "fx:id=\"R2C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C6 != null : "fx:id=\"R2C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C7 != null : "fx:id=\"R2C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R2C8 != null : "fx:id=\"R2C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C1 != null : "fx:id=\"R3C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C2 != null : "fx:id=\"R3C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C3 != null : "fx:id=\"R3C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C4 != null : "fx:id=\"R3C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C5 != null : "fx:id=\"R3C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C6 != null : "fx:id=\"R3C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C7 != null : "fx:id=\"R3C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R3C8 != null : "fx:id=\"R3C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C1 != null : "fx:id=\"R4C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C2 != null : "fx:id=\"R4C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C3 != null : "fx:id=\"R4C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C4 != null : "fx:id=\"R4C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C5 != null : "fx:id=\"R4C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C6 != null : "fx:id=\"R4C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C7 != null : "fx:id=\"R4C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R4C8 != null : "fx:id=\"R4C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C1 != null : "fx:id=\"R5C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C2 != null : "fx:id=\"R5C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C3 != null : "fx:id=\"R5C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C4 != null : "fx:id=\"R5C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C5 != null : "fx:id=\"R5C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C6 != null : "fx:id=\"R5C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C7 != null : "fx:id=\"R5C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R5C8 != null : "fx:id=\"R5C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C1 != null : "fx:id=\"R6C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C != null : "fx:id=\"R6C\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C4 != null : "fx:id=\"R6C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C5 != null : "fx:id=\"R6C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C6 != null : "fx:id=\"R6C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C7 != null : "fx:id=\"R6C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R6C8 != null : "fx:id=\"R6C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C1 != null : "fx:id=\"R7C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C2 != null : "fx:id=\"R7C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C3 != null : "fx:id=\"R7C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C4 != null : "fx:id=\"R7C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C5 != null : "fx:id=\"R7C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C6 != null : "fx:id=\"R7C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C7 != null : "fx:id=\"R7C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R7C8 != null : "fx:id=\"R7C8\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C1 != null : "fx:id=\"R8C1\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C2 != null : "fx:id=\"R8C2\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C3 != null : "fx:id=\"R8C3\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C4 != null : "fx:id=\"R8C4\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C5 != null : "fx:id=\"R8C5\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C6 != null : "fx:id=\"R8C6\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C7 != null : "fx:id=\"R8C7\" was not injected: check your FXML file 'Untitled'.";
+        assert R8C8 != null : "fx:id=\"R8C8\" was not injected: check your FXML file 'Untitled'.";
+        assert HistorySteps != null : "fx:id=\"HistorySteps\" was not injected: check your FXML file 'Untitled'.";
+
+    }
+}

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="NewGame" mnemonicParsing="false" onAction="#StartNewGame" text="Новая игра" />
+              <MenuItem fx:id="CheckersTerminate" mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem fx:id="HideHS" mnemonicParsing="false" onAction="#HideHS" text="Скрыть историю ходов" />
+                  <MenuItem fx:id="ShowHS" mnemonicParsing="false" onAction="#ShowHS" text="Показать историю ходов" visible="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox>
+         <children>
+            <VBox prefHeight="775.0" prefWidth="50.0">
+               <children>
+                  <Pane prefHeight="135.0" prefWidth="25.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="25.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="8" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="7" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="6" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="5" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="4" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="3" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="2" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="25.0" text="1" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <VBox prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="700.0">
+                     <children>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" cache="true" contentDisplay="TOP" prefHeight="20.0" prefWidth="97.0" text="A" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="B" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="C" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="D" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="E" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="F" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="G" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="97.0" text="H" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R1C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R1C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R1C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R1C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R1C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R1C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R1C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R1C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R2C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R2C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R2C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R2C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R2C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R2C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R2C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R2C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R3C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R3C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R3C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R3C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R3C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R3C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R3C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R3C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R4C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R4C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R4C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R4C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R4C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R4C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R4C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R4C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R5C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R5C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R5C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R5C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R5C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R5C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R5C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R5C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R6C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R6C" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R6C" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R6C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R6C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R6C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R6C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R6C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R7C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R7C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R7C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R7C4" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R7C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R7C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R7C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R7C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R8C1" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R8C2" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R8C3" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R8C4" fitHeight="94.0" fitWidth="97.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R8C5" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R8C6" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #8B4513;">
+                           <children>
+                              <ImageView fx:id="R8C7" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #E9D89F;">
+                           <children>
+                              <ImageView fx:id="R8C8" fitHeight="94.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefWidth="150.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefWidth="150.0" text="История ходов:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="HistorySteps" prefHeight="752.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="7.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
