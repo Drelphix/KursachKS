@@ -48,6 +48,7 @@ public class ChessBoard extends JFrame implements MouseListener, MouseMotionList
                 square.setBackground(i % 2 == 0 ? BLACK_COLOR : WHITE_COLOR);
 
         }
+
     }
     public void DrawBoard(){
         JFrame frame = new ChessBoard();
@@ -58,24 +59,28 @@ public class ChessBoard extends JFrame implements MouseListener, MouseMotionList
         frame.setVisible(true);
     }
         public void PutCheckers (int[] mas){
-            JLabel piece;
+
             for (int i=0;i<8;i++){
                 loop:
                 for (int j=0;j<8;j++){
                     if (mas[j]==1){
-                        piece = new JLabel(new ImageIcon(WHITE_CHECKER));
+                        this.chessPiece = new JLabel(new ImageIcon(WHITE_CHECKER));
                     }   else if (mas[j]==2){
-                        piece = new JLabel(new ImageIcon(BLACK_CHECKER));
+                        this.chessPiece = new JLabel(new ImageIcon(BLACK_CHECKER));
                     } else if(mas[j]==3){
-                        piece = new JLabel(new ImageIcon(WHITE_QUEEN));
+                        this.chessPiece = new JLabel(new ImageIcon(WHITE_QUEEN));
                     } else if(mas[j]==4) {
-                        piece = new JLabel(new ImageIcon(BLACK_QUEEN));
+                        this.chessPiece = new JLabel(new ImageIcon(BLACK_QUEEN));
                     }
                     else break loop;
                     JPanel panel = (JPanel) chessBoard.getComponent(j);
-                    panel.add(piece);
+                    final JScrollPane scrollPane = new JScrollPane(panel);
+                    panel.add(this.chessPiece);
+
+                    scrollPane.revalidate();
                 }
             }
+
         }
 
 

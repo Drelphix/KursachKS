@@ -3,6 +3,7 @@ package by.vsu.sdo;
 
 
 
+import by.vsu.sdo.checkers.Board;
 import by.vsu.sdo.checkers.ChessBoard;
 
 import javax.swing.*;
@@ -19,7 +20,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class Application {
 
     public static void main(String[] args) throws IOException {
-        ChessBoard board=new ChessBoard();
+
         int[] mas =new int[]{1,0,1,0,1,0,1,0,
                              0,1,0,1,0,1,0,1,
                              1,0,1,0,1,0,1,0,
@@ -28,8 +29,9 @@ public class Application {
                              0,2,0,2,0,2,0,2,
                              2,0,2,0,2,0,2,0,
                              0,2,0,2,0,2,0,2};
+        Board board=new Board();
         board.DrawBoard();
-       board.PutCheckers(mas);
+        board.PutCheckers(mas);
 
 
     }}
