@@ -17,61 +17,44 @@ public class ClientSide {
         }
         return this.connection;
     }
-    private void SendToServer(){
-
+    private void SendDataToServer(byte[] mas,DataOutputStream out){
+        try {
+            out.writeByte(1);
+            out.write(mas);
+            out.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public void CreateNewLobby(){
       Connection();
-        DataOutputStream SendToServer  = new DataOutputStream(connection.getOutputStream());
-
-// Send first message
-        dOut.writeByte(1);
-        dOut.writeUTF("This is the first type of message.");
-        dOut.flush(); // Send off the data
-
-// Send the second message
-        dOut.writeByte(2);
-        dOut.writeUTF("This is the second type of message.");
-        dOut.flush(); // Send off the data
-
-// Send the third message
-        dOut.writeByte(3);
-        dOut.writeUTF("This is the third type of message (Part 1).");
-        dOut.writeUTF("This is the third type of message (Part 2).");
-        dOut.flush(); // Send off the data
-
-// Send the exit message
-        dOut.writeByte(-1);
-        dOut.flush();
-
-        dOut.close();
+        try {
+            DataOutputStream toServer  = new DataOutputStream(connection.getOutputStream());
+            toServer.writeByte(2);
+            System.out.println("Please input lobby's name");
+            Scanner in = new Scanner(System.in);
+            toServer.writeUTF(in.next());
+            toServer.writeUTF(String.valueOf(connection.getLocalAddress()));
+            toServer.flush();
+            connection.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    public void ConnectToLobby(){
-
+    public void ConnectToLobby() throws IOException {
+        Connection();
+        try {
+            DataOutputStream toServer  = new DataOutputStream(connection.getOutputStream());
+            toServer.writeByte(3);
+            toServer.flush();
+            DataInputStream dIn = new DataInputStream(connection.getInputStream());
+            while (dIn.readChar()=='/') {
+                System.out.println("Lobby: " + dIn.readUTF());
+            }
+            toServer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        connection.close();
     }
-    public void SendToServer(int mas[]) throws IOException {
-    BufferedReader in  = new
-            BufferedReader(new
-            InputStreamReader(connection.getInputStream()));
-    PrintWriter out = new
-            PrintWriter(connection.getOutputStream(),true);
-    BufferedReader inu = new
-            BufferedReader(new InputStreamReader(System.in));
-
-    String fuser,fserver;
-
-            while ((fuser = inu.readLine())!=null) {
-        out.println(fuser);
-        fserver = in.readLine();
-        System.out.println(fserver);
-        if (fuser.equalsIgnoreCase("close")) break;
-        if (fuser.equalsIgnoreCase("exit")) break;
-    }
-
-
-            out.close();
-            in.close();
-            inu.close();
-            connection.close();}
 }
