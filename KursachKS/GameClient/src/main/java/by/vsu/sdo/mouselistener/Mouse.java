@@ -2,8 +2,6 @@ package by.vsu.sdo.mouselistener;
 
 import by.vsu.sdo.checkers.Board;
 
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class Mouse {
