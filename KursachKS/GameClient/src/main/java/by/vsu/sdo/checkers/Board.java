@@ -6,15 +6,15 @@ import java.awt.*;
 public class Board extends JFrame {
     private final static Color BLACK_COLOR = new Color(152, 89, 46);
     private final static Color WHITE_COLOR = new Color(233, 216, 159);
-    public final static String WHITE_CHECKER = "./src/main/java/by/vsu/sdo/checkers/resourses/white.png";
-    public final static String BLACK_CHECKER = "./src/main/java/by/vsu/sdo/checkers/resourses/black.png";
+    public final static String WHITE_CHECKER = "./resourses/white.png";
+    public final static String BLACK_CHECKER = "E:\\KursachKS\\KursachKS\\GameClient\\resourses\\black.png";
     public final static String WHITE_QUEEN = "./src/main/java/by/vsu/sdo/checkers/resourses/white_queen.png";
     public final static String BLACK_QUEEN = "./src/main/java/by/vsu/sdo/checkers/resourses/black_queen.png";
 
     JLayeredPane layeredPane;
     JPanel chessBoard;
     JLabel chessPiece;
-    JScrollPane checkersUpdate;
+    JScrollPane scrollPane;
 
     public Board() {
         Dimension boardSize = new Dimension(800, 800);
@@ -49,7 +49,6 @@ public class Board extends JFrame {
         frame.setVisible(true);
     }
     public void PutCheckers (int[] mas){
-
         for (int i=0;i<8;i++){
             loop:
             for (int j=0;j<8;j++){
@@ -67,6 +66,7 @@ public class Board extends JFrame {
                 panel.add(this.chessPiece);
             }
         }
+        scrollPane.revalidate();
     }
 
     @Override
