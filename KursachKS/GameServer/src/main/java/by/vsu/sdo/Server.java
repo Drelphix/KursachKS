@@ -1,59 +1,60 @@
 package by.vsu.sdo;
 
-import java.awt.*;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Server {
-    private List<String[]> lobbyList=new ArrayList<>();
-    Socket fromClient;
+    static final int PORT = 4444;
+    private ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
 
-    private static final int PORT = 4444;
-    public void StartServer() throws IOException {
-        ServerSocket server = new ServerSocket(PORT);
-        this.fromClient = server.accept();
-        Waiting();
-    }
-    private void Waiting() throws IOException {
-        DataInputStream in = new DataInputStream(fromClient.getInputStream());
-        DataOutputStream out = new DataOutputStream(fromClient.getOutputStream());
-                byte line = in.readByte();
-                switch (line) {
-                    case 1: {
-                        byte[] mas = in.readAllBytes();
-                        for (int i : mas) {
-                            System.out.println(mas[i]);
-                        }
-                    }
-                    case 2: {
-                        String[] lobbyName = new String[2];
-                        lobbyName[0] = in.readUTF();
-                        lobbyName[1] = in.readUTF();
-                        lobbyList.add(lobbyName);
-                    }
-                    case 3: {
-                        out.writeByte(3);
-                        String[] test = new String[2];
-                        test[0] = "String";
-                        test[1] = "ip";
-                        lobbyList.add(test);
-                        for (String[] lobbyName : lobbyList) {
-                            out.writeUTF(lobbyName[0]);
-                            out.writeUTF(lobbyName[1]);
-                        }
-                        out.writeChar('/');
-                        out.flush();
+    public Server() {
 
+        Socket clientSocket = null;
+        // серверный сокет
+        ServerSocket serverSocket = null;
+        try {
+            // создаём серверный сокет на определенном порту
+            serverSocket = new ServerSocket(PORT);
+            System.out.println("Сервер запущен!");
+            // запускаем бесконечный цикл
+            while (true) {
+                // таким образом ждём подключений от сервера
+                clientSocket = serverSocket.accept();
+                // создаём обработчик клиента, который подключился к серверу
+                // this - это наш сервер
+                ClientHandler client = new ClientHandler(clientSocket, this);
+                clients.add(client);
+                // каждое подключение клиента обрабатываем в новом потоке
+                new Thread(client).start();
             }
-        } in.close();
-                out.close();
-                fromClient.close();
-                StartServer();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            try {
+                // закрываем подключение
+                clientSocket.close();
+                System.out.println("Сервер остановлен");
+                serverSocket.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    // отправляем сообщение всем клиентам
+    public void sendMessageToAllClients(String msg) {
+        for (ClientHandler o : clients) {
+            o.sendMsg(msg);
+        }
+
+    }
+
+    // удаляем клиента из коллекции при выходе из чата
+    public void removeClient(ClientHandler client) {
+        clients.remove(client);
     }
 
 }
