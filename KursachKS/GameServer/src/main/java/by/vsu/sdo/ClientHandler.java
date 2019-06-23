@@ -41,8 +41,7 @@ public class ClientHandler implements Runnable {
                 // Если от клиента пришло сообщение
                 if (inMessage.hasNext()) {
                     String clientMessage = inMessage.nextLine();
-                    // если клиент отправляет данное сообщение, то цикл прерывается и
-                    // клиент выходит из чата
+
                     if (clientMessage.equalsIgnoreCase("##session##end##")) {
                         break;
                     }

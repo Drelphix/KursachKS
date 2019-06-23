@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/ClientSide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Form/CheckersForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/Form/CheckersForm.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/checkers/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/exchange/ClientSide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/target/classes/by/vsu/sdo/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/target/classes/by/vsu/sdo/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="-61">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,10 +63,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="-10">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2554#2564#0" expanded="true" />
+                <element signature="e#1296#1304#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,6 +99,9 @@
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" />
       </list>
     </option>
@@ -166,6 +157,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sdo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Application" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GameServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sdo" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -201,7 +201,7 @@
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.*" />
+          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -214,7 +214,7 @@
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.*" />
+          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -227,7 +227,7 @@
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.*" />
+          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -258,18 +258,18 @@
       <workItem from="1561123116640" duration="558000" />
       <workItem from="1561217315554" duration="335000" />
       <workItem from="1561217856641" duration="762000" />
-      <workItem from="1561285284580" duration="6649000" />
+      <workItem from="1561285284580" duration="15523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14791000" />
+    <option name="totallyTimeSpent" value="23665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -278,7 +278,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -359,7 +359,53 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" selection-start-line="7" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2554#2564#0" expanded="true" />
+            <element signature="e#1296#1304#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -376,8 +422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="-61">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

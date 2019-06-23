@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8dd8379-6d87-4c12-840b-84f2c3d95864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Application.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Form/CheckersForm.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Form/CheckersForm.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/Application.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/target/classes/by/vsu/sdo/Application.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +35,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -65,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
+            <state relative-caret-position="289">
               <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -267,7 +249,7 @@
       <workItem from="1560687070578" duration="28952000" />
       <workItem from="1560719867535" duration="747000" />
       <workItem from="1561123084769" duration="586000" />
-      <workItem from="1561288064144" duration="4356000" />
+      <workItem from="1561288064144" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1560693683164</created>
@@ -308,10 +290,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34641000" />
+    <option name="totallyTimeSpent" value="35222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.25799572" />
@@ -323,7 +305,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48987207" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48987207" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,19 +391,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
+        <state relative-caret-position="289">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -437,6 +409,16 @@
             <element signature="e#4569#4570#0" expanded="true" />
             <element signature="e#4684#5673#0" expanded="true" />
             <element signature="e#5672#5673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
