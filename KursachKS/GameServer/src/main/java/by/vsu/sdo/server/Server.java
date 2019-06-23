@@ -1,12 +1,12 @@
 package by.vsu.sdo.server;
 
 
+import by.vsu.sdo.sql.SQL;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-
-import by.vsu.sdo.sql.SQL;
 
 public class Server {
     static final int PORT = 4444;
