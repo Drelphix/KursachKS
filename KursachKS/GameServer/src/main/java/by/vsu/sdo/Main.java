@@ -1,5 +1,7 @@
 package by.vsu.sdo;
 
+import by.vsu.sdo.server.Server;
+
 public class Main {
 
     public static void main(String[] args) {

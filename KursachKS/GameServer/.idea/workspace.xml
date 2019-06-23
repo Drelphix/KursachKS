@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,15 +24,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-401">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+            <state relative-caret-position="476">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#249#264#0" expanded="true" />
                 <element signature="e#2094#2095#0" expanded="true" />
                 <element signature="e#2132#2133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,20 +68,7 @@
             <state relative-caret-position="119">
               <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
-                <element signature="e#85#86#0" expanded="true" />
-                <element signature="e#129#130#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#163#164#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,10 +77,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="459">
+              <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
                 <element signature="e#2554#2564#0" expanded="true" />
                 <element signature="e#1296#1304#0" expanded="true" />
               </folding>
@@ -95,14 +109,20 @@
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/MultiThreadServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/MonoThreadClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Connection.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Clients.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" />
       </list>
     </option>
   </component>
@@ -258,12 +278,12 @@
       <workItem from="1561123116640" duration="558000" />
       <workItem from="1561217315554" duration="335000" />
       <workItem from="1561217856641" duration="762000" />
-      <workItem from="1561285284580" duration="15523000" />
+      <workItem from="1561285284580" duration="20938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23665000" />
+    <option name="totallyTimeSpent" value="29080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -277,7 +297,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -343,19 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-401">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#249#264#0" expanded="true" />
-            <element signature="e#2094#2095#0" expanded="true" />
-            <element signature="e#2132#2133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -397,33 +404,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#163#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="459">
+          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
             <element signature="e#2554#2564#0" expanded="true" />
             <element signature="e#1296#1304#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="415">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="e#85#86#0" expanded="true" />
-            <element signature="e#129#130#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="476">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#249#264#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
