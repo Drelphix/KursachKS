@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8dd8379-6d87-4c12-840b-84f2c3d95864" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/libraries/Maven__commons_net_commons_net_3_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/vsu/sdo/Application.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Clients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameServer/Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/server/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,22 +42,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="245">
+              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,8 +114,9 @@
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSid.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/exchange/ClientSide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -118,7 +138,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="332" />
     <option name="width" value="1612" />
     <option name="height" value="876" />
@@ -130,6 +150,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,7 +193,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.vsu.sdo.Application" />
       <module name="Application" />
@@ -226,8 +246,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="by.vsu.sdo.Main" />
+      <module name="Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.vsu.sdo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.ChessBoard" />
       </list>
@@ -249,6 +283,9 @@
       <workItem from="1561288064144" duration="4937000" />
       <workItem from="1561302235306" duration="179000" />
       <workItem from="1561304066196" duration="620000" />
+      <workItem from="1561308683562" duration="171000" />
+      <workItem from="1561445511023" duration="594000" />
+      <workItem from="1561463687340" duration="1679000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1560693683164</created>
@@ -289,13 +326,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36021000" />
+    <option name="totallyTimeSpent" value="38465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.26332623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945828" visible="true" weight="0.27132195" />
       <window_info id="Structure" order="1" sideWeight="0.5005417" side_tool="true" weight="0.25266525" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,7 +351,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.3997833" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48827294" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48827294" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -360,12 +397,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/NewBoard.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/ChessBoard.java" />
-    <entry file="file://$PROJECT_DIR$/Application.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Menu.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Menu.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Grid.java" />
@@ -375,23 +406,34 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Client.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/mouselistener/Mouse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/checkers/Board.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="245">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientSide.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
         </state>
       </provider>
     </entry>

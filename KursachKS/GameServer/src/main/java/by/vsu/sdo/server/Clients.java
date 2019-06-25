@@ -6,12 +6,11 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Clients implements Runnable {
-    private static final String HOST = "localhost";
-    private static final int PORT = 4444;
+    private String HOST = "localhost";
+    private int PORT = 4444;
     private static int clients_count = 0;
     private Server server;
     private PrintWriter outMessage;
@@ -37,8 +36,6 @@ public class Clients implements Runnable {
         }
     }
 
-    // Переопределяем метод run(), который вызывается когда
-    // мы вызываем new Thread(client).start();
     @Override
     public void run() {
         try {
@@ -104,14 +101,15 @@ public class Clients implements Runnable {
             ex.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Клиент вошел и сразу же вышел");
         } /*catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Чат не найден");
-        } */
-        finally {
+        } */ finally {
             this.close();
         }
     }
+
 
     // отправляем сообщение
     public void sendMsg(String msg) {
@@ -130,4 +128,7 @@ public class Clients implements Runnable {
         clients_count--;
         server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
     }
+
+
+
 }
