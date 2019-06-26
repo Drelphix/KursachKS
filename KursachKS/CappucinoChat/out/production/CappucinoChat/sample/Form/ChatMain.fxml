@@ -42,7 +42,7 @@
          <children>
             <HBox prefHeight="280.0" prefWidth="600.0">
                <children>
-                  <JFXTextArea fx:id="ListViewMessage" editable="false" style="-fx-background-color: #424242; -fx-text-fill: white; -fx-text-size: 15;">
+                  <JFXTextArea fx:id="ListViewMessage" prefHeight="276.0" prefWidth="480.0" style="-fx-background-color: #424242; -fx-text-fill: white; -fx-font-size: 15;">
                      <HBox.margin>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                      </HBox.margin>
