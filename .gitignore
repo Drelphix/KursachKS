@@ -10,3 +10,4 @@ buildNumber.properties
 *.class
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+KursachKS/GameServer/.idea/workspace.xml
