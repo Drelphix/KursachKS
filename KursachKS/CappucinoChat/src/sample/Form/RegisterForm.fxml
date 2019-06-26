@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
    <children>
       <JFXTextField fx:id="PasswordField" focusColor="#f6d155" layoutX="138.0" layoutY="211.0" promptText="Password" unFocusColor="WHITE">
          <font>
@@ -35,7 +35,7 @@
             <Font name="Segoe UI" size="18.0" />
          </font>
       </Label>
-      <JFXButton fx:id="Login" layoutX="113.0" layoutY="303.0" prefHeight="25.0" prefWidth="186.0" ripplerFill="#f6d155" style="-fx-background-color: #6c4f3d;" text="Create my Account" textFill="WHITE" />
+      <JFXButton fx:id="Login" layoutX="113.0" layoutY="303.0" onAction="#CreateAccount" prefHeight="25.0" prefWidth="186.0" ripplerFill="#f6d155" style="-fx-background-color: #6c4f3d;" text="Create my Account" textFill="WHITE" />
       <JFXTextField fx:id="PasswordField1" focusColor="#f6d155" layoutX="138.0" layoutY="255.0" promptText="Confirm Password" unFocusColor="WHITE">
          <font>
             <Font size="14.0" />

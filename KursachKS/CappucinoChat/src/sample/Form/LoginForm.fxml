@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #1d1d1d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
    <children>
       <JFXTextField fx:id="PasswordField" focusColor="#f6d155" layoutX="136.0" layoutY="226.0" promptText="Password" unFocusColor="WHITE">
          <font>
@@ -36,8 +36,8 @@
             <Font name="Segoe UI" size="18.0" />
          </font>
       </Label>
-      <JFXButton fx:id="Login" layoutX="112.0" layoutY="297.0" prefHeight="25.0" prefWidth="181.0" ripplerFill="#f6d155" style="-fx-background-color: #6c4f3d;" text="Login" textFill="WHITE" />
-      <JFXButton fx:id="SignUP" layoutX="322.0" layoutY="15.0" prefHeight="25.0" prefWidth="64.0" ripplerFill="#6c4f3d" style="-fx-background-color: #f6d155;" text="Sign UP" textFill="WHITE" />
+      <JFXButton fx:id="Login" layoutX="112.0" layoutY="297.0" onAction="#LoginInServer" prefHeight="25.0" prefWidth="181.0" ripplerFill="#f6d155" style="-fx-background-color: #6c4f3d;" text="Login" textFill="WHITE" />
+      <JFXButton fx:id="SignUP" layoutX="322.0" layoutY="15.0" onAction="#ShowSignUP" prefHeight="25.0" prefWidth="64.0" ripplerFill="#6c4f3d" style="-fx-background-color: #f6d155;" text="Sign UP" textFill="WHITE" />
       <JFXCheckBox fx:id="CheckRememberMe" layoutX="112.0" layoutY="268.0" prefHeight="18.0" prefWidth="181.0" text="Remember Me" />
       <Label layoutX="242.0" layoutY="16.0" text="Not member?" textFill="#a1a1a1" />
       <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="108.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
