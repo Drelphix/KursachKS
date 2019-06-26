@@ -31,6 +31,7 @@ public class Clients implements Runnable {
             this.outMessage = new PrintWriter(socket.getOutputStream());
             this.inMessage = new Scanner(socket.getInputStream());
             this.auth = new DataInputStream(socket.getInputStream());
+            System.out.println("Новый клиент присоединился");
         } catch (IOException ex) {
             ex.printStackTrace();
         }

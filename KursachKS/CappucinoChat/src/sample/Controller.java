@@ -33,13 +33,25 @@ public class Controller {
 
     @FXML
     void ClearMessageButton(ActionEvent event) {
+        Connect connect = new Connect();
+        connect.Connecting();
 
     }
 
     @FXML
     void SendMessageButton(ActionEvent event) {
-    SendMessageTextArea.setText("fdsarg");
-    ListViewMessage.setText("fdsfadsfsdfaf.fdaffdsa");
+        Chat chat = new Chat();
+        String message = SendMessageTextArea.getText();
+        String text = ListViewMessage.getText();
+        if(chat.SendMessage(message)){
+         GetNewMessage(message);
+        } else ListViewMessage.setText(text+"/n"+"!!!Сообщение не было отправлено!!!"+"/n"+message);
+
+    }
+
+    void GetNewMessage(String message){
+        String text = ListViewMessage.getText();
+        ListViewMessage.setText(text+"/n"+message);
     }
 
     @FXML

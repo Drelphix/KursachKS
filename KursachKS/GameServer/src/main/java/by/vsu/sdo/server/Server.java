@@ -24,7 +24,7 @@ public class Server {
             sqlServer.StartSQL();
             while (true) {
                 clientSocket = serverSocket.accept();
-                // создаём обработчик клиента, который подключился к серверу
+
                 Clients client = new Clients(clientSocket, this);
 
                 clients.add(client);

@@ -11,14 +11,15 @@ import java.util.Scanner;
 
 public class Chat {
     private String userName;
-    Socket socket;
+
     private Scanner inMessage;
     Connect connect = new Connect();
+
     Controller controller = new Controller();
 
     public boolean SendMessage(String message){
         try {
-            PrintWriter outMessage = new PrintWriter(socket.getOutputStream());
+            PrintWriter outMessage = new PrintWriter(connect.clientSocket.getOutputStream());
             outMessage.println(message);
             outMessage.flush();
             return true;
@@ -34,11 +35,11 @@ public class Chat {
     public void SendSmile(){
 
     }
-    public void Waiting(List<String> messages){
-        ObservableList<String> list = FXCollections.observableArrayList("Mark","fdsfsdafdfaifjdasfjdasfdasfdasf","dsakfbdfashuhdafsuhfdasuhdfhudfasuhfdauhdfsahufdsahufdshuafdhsuahufdsahufsad");
+    public void Waiting(){
     while (true){
         if(inMessage.hasNext()){
-
+            String message = inMessage.next();
+            controller.GetNewMessage(message);
         }
     }
     }
