@@ -1,10 +1,10 @@
 package sample;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class Controller {
@@ -26,6 +26,16 @@ public class Controller {
 
     @FXML
     private JFXButton SendMessageButton;
+
+    @FXML
+    void ClearMessageButton(ActionEvent event) {
+
+    }
+
+    @FXML
+    void SendMessageButton(ActionEvent event) {
+
+    }
 
     @FXML
     void initialize() {
