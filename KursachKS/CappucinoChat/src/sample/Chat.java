@@ -12,19 +12,19 @@ import java.util.Scanner;
 public class Chat {
     private String userName;
     Socket socket;
-
     private Scanner inMessage;
     Connect connect = new Connect();
-
     Controller controller = new Controller();
 
-    public void SendMessage(String message){
+    public boolean SendMessage(String message){
         try {
             PrintWriter outMessage = new PrintWriter(socket.getOutputStream());
             outMessage.println(message);
             outMessage.flush();
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
     public void SendPicture(){
