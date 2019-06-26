@@ -12,3 +12,4 @@ buildNumber.properties
 !/.mvn/wrapper/maven-wrapper.jar
 *.xml
 KursachKS/CappucinoChat/.idea/workspace.xml
+*.xml

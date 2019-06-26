@@ -38,7 +38,8 @@ public class Controller {
 
     @FXML
     void SendMessageButton(ActionEvent event) {
-
+    SendMessageTextArea.setText("fdsarg");
+    ListViewMessage.setText("fdsfadsfsdfaf.fdaffdsa");
     }
 
     @FXML

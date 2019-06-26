@@ -4,9 +4,13 @@
     <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Chat.java" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Connect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,8 +59,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="425">
               <caret line="103" column="64" lean-forward="true" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
+=======
+            <state relative-caret-position="-1173">
+              <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="72" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -324,7 +333,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="37684000" />
+=======
+    <option name="totallyTimeSpent" value="38458000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -449,8 +462,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="425">
           <caret line="103" column="64" lean-forward="true" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
+=======
+        <state relative-caret-position="-1173">
+          <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="72" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
