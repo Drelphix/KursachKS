@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FXML2.iml" filepath="$PROJECT_DIR$/FXML2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CappucinoChat.iml" filepath="$PROJECT_DIR$/CappucinoChat.iml" />
     </modules>
   </component>
 </project>
