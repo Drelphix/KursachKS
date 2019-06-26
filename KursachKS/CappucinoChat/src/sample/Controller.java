@@ -1,4 +1,5 @@
 package sample;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
@@ -14,6 +15,9 @@ public class Controller {
 
     @FXML
     private URL location;
+
+    @FXML
+    private JFXListView<?> ListViewMessage;
 
     @FXML
     private JFXListView<?> ListViewUser;
@@ -39,6 +43,7 @@ public class Controller {
 
     @FXML
     void initialize() {
+        assert ListViewMessage != null : "fx:id=\"ListViewMessage\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ListViewUser != null : "fx:id=\"ListViewUser\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageTextArea != null : "fx:id=\"SendMessageTextArea\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ClearMessageButton != null : "fx:id=\"ClearMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
