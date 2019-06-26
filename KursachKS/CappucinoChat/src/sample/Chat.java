@@ -28,13 +28,7 @@ public class Chat {
             return false;
         }
     }
-    public void SendPicture(){
 
-
-    }
-    public void SendSmile(){
-
-    }
     public void Waiting(){
     while (true){
         if(inMessage.hasNext()){

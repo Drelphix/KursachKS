@@ -3,6 +3,7 @@ package by.vsu.sdo.server;
 import by.vsu.sdo.sql.SQL;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -16,6 +17,7 @@ public class Clients implements Runnable {
     private PrintWriter outMessage;
     private Scanner inMessage;
     private DataInputStream auth;
+    private DataOutputStream authMsg;
     private Socket clientSocket = null;
     private SQL sqlServer;
     private User user;
@@ -31,6 +33,7 @@ public class Clients implements Runnable {
             this.outMessage = new PrintWriter(socket.getOutputStream());
             this.inMessage = new Scanner(socket.getInputStream());
             this.auth = new DataInputStream(socket.getInputStream());
+            this.authMsg = new DataOutputStream(socket.getOutputStream());
             System.out.println("Новый клиент присоединился");
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -50,16 +53,19 @@ public class Clients implements Runnable {
                     if (user.auth(login, password)) {
                         server.sendMessageToAllClients(login + " вошёл в чат!");
                         server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
+                        authMsg.write(0);
+                        authMsg.flush();
                         break;
                     } else {
-                        sendMsg("Login failed");
+                        authMsg.write(1);
+                        authMsg.flush();
                         close();
                     }
                     // Новый пользователь
                 } else if (auth.readByte() == 2) {
+                    String newEmail = auth.readUTF();
                     String newLogin = auth.readUTF();
                     String newPassword = auth.readUTF();
-                    String newEmail = auth.readUTF();
                     if (sqlServer.NewUser(newLogin, newPassword, newEmail)) {
                         System.out.println("Новый пользователь создан");
                         user.auth(newLogin, newPassword);
