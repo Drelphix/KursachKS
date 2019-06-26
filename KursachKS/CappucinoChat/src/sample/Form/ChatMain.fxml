@@ -31,11 +31,7 @@
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="492.0" layoutY="18.0" prefHeight="17.0" prefWidth="50.0" text="Список" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
+            <JFXButton fx:id="ExitLoginForm" layoutX="523.0" layoutY="8.0" onAction="#ExitLoginForm" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6c4f3d;" text="Exit" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutY="39.0" prefHeight="280.0" prefWidth="600.0">

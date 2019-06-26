@@ -42,5 +42,19 @@
       </ImageView>
       <TextField fx:id="LoginField" layoutX="136.0" layoutY="185.0" prefHeight="27.0" prefWidth="157.0" promptText="Login" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
       <TextField fx:id="PasswordField" layoutX="136.0" layoutY="228.0" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+      <AnchorPane fx:id="ConnectionMessage" layoutX="103.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickMessageConnection" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #ff9100; -fx-background-radius: 8;" visible="false">
+         <children>
+            <Label layoutX="28.0" layoutY="14.0" text="Server is not available" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="32.0" text="Please try again later" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
