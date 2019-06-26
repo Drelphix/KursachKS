@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee41d20-c306-4a8e-ae1b-39f8ce0cd47e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../GameServer/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CappucinoChat/sample/Form/ChatMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CappucinoChat/sample/Form/ChatMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Form/ChatMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Form/ChatMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GameServer/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +41,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -57,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="332" />
     <option name="width" value="1612" />
     <option name="height" value="876" />
@@ -68,7 +61,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,13 +103,14 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GameServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -169,17 +162,18 @@
       <updated>1561554150861</updated>
       <workItem from="1561554156497" duration="1833000" />
       <workItem from="1561558762767" duration="860000" />
+      <workItem from="1561561454082" duration="9000" />
+      <workItem from="1561561514309" duration="29000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2693000" />
+    <option name="totallyTimeSpent" value="2731000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25945538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -214,22 +208,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530" />
-      </provider>
-    </entry>
-    <entry file="file://E:/Deshifr/Deshifr/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://E:/Deshifr/Deshifr/src/sample/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2907" />
-      </provider>
-    </entry>
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java" />
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/Main.java" />
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/MainController.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Form/ChatMain.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
