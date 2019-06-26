@@ -5,6 +5,9 @@ import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -17,10 +20,10 @@ public class Controller {
     private URL location;
 
     @FXML
-    private JFXListView<?> ListViewMessage;
+    public JFXListView<String> ListViewMessage;
 
     @FXML
-    private JFXListView<?> ListViewUser;
+    public JFXListView<String> ListViewUser;
 
     @FXML
     private JFXTextArea SendMessageTextArea;
@@ -33,7 +36,7 @@ public class Controller {
 
     @FXML
     void ClearMessageButton(ActionEvent event) {
-
+        SendMessageTextArea.clear();
     }
 
     @FXML
