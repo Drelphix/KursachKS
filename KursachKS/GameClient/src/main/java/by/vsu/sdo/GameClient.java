@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import static javafx.application.Application.launch;
 
-class Main extends Application {
+class GameClient extends Application {
     public static Stage primaryStage;
     public static Parent root;
 
@@ -34,3 +34,5 @@ class Main extends Application {
     }
 
 }
+
+
