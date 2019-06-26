@@ -1,5 +1,6 @@
 package sample;
 
+import java.io.IOException;
 import java.net.Socket;
 
 public class Connect{
@@ -9,7 +10,11 @@ public class Connect{
 
 
     public void Connecting(){
-        clientSocket = new Socket(HOST, PORT); // подключаемся к серверу
+        try {
+            clientSocket = new Socket(HOST, PORT); // подключаемся к серверу
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void Close(){

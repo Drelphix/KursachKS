@@ -17,7 +17,7 @@ public class Controller {
     private URL location;
 
     @FXML
-    private JFXListView<?> ListViewMessage;
+    private JFXTextArea ListViewMessage;
 
     @FXML
     private JFXListView<?> ListViewUser;
