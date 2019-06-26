@@ -1,12 +1,12 @@
-package sample.Form;
+package sample;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
-import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 public class LoginController {
 
@@ -17,12 +17,6 @@ public class LoginController {
     private URL location;
 
     @FXML
-    private JFXTextField PasswordField;
-
-    @FXML
-    private JFXTextField LoginField;
-
-    @FXML
     private JFXButton Login;
 
     @FXML
@@ -30,6 +24,12 @@ public class LoginController {
 
     @FXML
     private JFXCheckBox CheckRememberMe;
+
+    @FXML
+    private TextField LoginField;
+
+    @FXML
+    private TextField PasswordField;
 
     @FXML
     void LoginInServer(ActionEvent event) {
@@ -43,11 +43,11 @@ public class LoginController {
 
     @FXML
     void initialize() {
-        assert PasswordField != null : "fx:id=\"PasswordField\" was not injected: check your FXML file 'LoginForm.fxml'.";
-        assert LoginField != null : "fx:id=\"LoginField\" was not injected: check your FXML file 'LoginForm.fxml'.";
         assert Login != null : "fx:id=\"Login\" was not injected: check your FXML file 'LoginForm.fxml'.";
         assert SignUP != null : "fx:id=\"SignUP\" was not injected: check your FXML file 'LoginForm.fxml'.";
         assert CheckRememberMe != null : "fx:id=\"CheckRememberMe\" was not injected: check your FXML file 'LoginForm.fxml'.";
+        assert LoginField != null : "fx:id=\"LoginField\" was not injected: check your FXML file 'LoginForm.fxml'.";
+        assert PasswordField != null : "fx:id=\"PasswordField\" was not injected: check your FXML file 'LoginForm.fxml'.";
 
     }
 }
