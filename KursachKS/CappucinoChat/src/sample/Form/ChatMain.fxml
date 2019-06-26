@@ -18,7 +18,7 @@
          <children>
             <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../GitHub/KursachKS/KursachKS/GameClient/src/main/java/by/vsu/sdo/Form/Image/Cappuccino.png" />
+                  <Image url="@Image/Cappuccino.png" />
                </image>
             </ImageView>
             <Label layoutX="45.0" layoutY="8.0" prefHeight="16.0" prefWidth="94.0" text="Cappuccino" textFill="#6c4f3d">

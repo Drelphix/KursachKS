@@ -9,8 +9,8 @@ import java.util.List;
 public class SQL {
     private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
     private final static String CONNECTION_STRING = "jdbc:mysql://localhost:3306/Chat?serverTimezone=UTC";
-    private final static String ROOT = "root";
-    private final static String PASSWORD = "root";
+    private final static String ROOT = "Drelphix";
+    private final static String PASSWORD = "q5J5HBsr10i1vlPu";
     //sql
     private final static String SELECT_DIALOG = "SELECT * FROM Chat Where idChat==";
     java.sql.Connection connection;
