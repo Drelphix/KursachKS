@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Connect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/out/production/CappucinoChat/sample/Form/ChatMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/out/production/CappucinoChat/sample/Form/ChatMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Form/ChatMain.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Form/ChatMain.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +55,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-731">
+            <state relative-caret-position="-884">
               <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -108,7 +105,9 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -147,7 +146,9 @@
     <option name="width" value="1612" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -228,6 +229,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -307,15 +309,15 @@
       <workItem from="1561285284580" duration="22117000" />
       <workItem from="1561445555835" duration="2612000" />
       <workItem from="1561558213472" duration="334000" />
-      <workItem from="1561559032157" duration="1351000" />
+      <workItem from="1561559032157" duration="2250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34556000" />
+    <option name="totallyTimeSpent" value="35455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
@@ -351,6 +353,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LIMIT_HISTORY" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Game.java" />
@@ -429,7 +434,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
+        <state relative-caret-position="-884">
           <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
