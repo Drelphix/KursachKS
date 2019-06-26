@@ -4,6 +4,7 @@ public class Connect {
 
 
     public void Connecting(){
+        static final int PORT = 4444;
 
     }
 
