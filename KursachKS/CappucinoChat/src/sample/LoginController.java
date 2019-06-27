@@ -1,21 +1,22 @@
 package sample;
 
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXCheckBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXCheckBox;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ResourceBundle;
+import javafx.scene.control.TextField;
 
 public class LoginController {
 
@@ -47,35 +48,46 @@ public class LoginController {
     @FXML
     private AnchorPane ConnectionMessage;
 
-    static void NewScene(Scene scene) {
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setResizable(false);
-        Main.primaryStage.hide();
-        stage.show();
-    }
-
     @FXML
     void ClickMessageConnection(MouseEvent event) {
-        ConnectionMessage.setVisible(false);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    this.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                ConnectionMessage.setVisible(false);
+            }
+        }.start();
     }
 
     @FXML
     void LoginInServer(ActionEvent event) {
 
         try {
-            if (connect.Authorization(LoginField.getText(), PasswordField.getText())) {
+            if(connect.Authorization(LoginField.getText(), PasswordField.getText())){
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 NewScene(scene);
-            } else {
+            }else{
                 ConnectionMessage.setVisible(true);
+                ClickMessageConnection(null);
             }
         } catch (Exception e) {
             e.printStackTrace();
             connect.Close();
         }
     }
+
+    static void NewScene(Scene scene){
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            Main.primaryStage.hide();
+            stage.show();
+        }
 
     @FXML
     void ShowSignUP(ActionEvent event) {
