@@ -5,21 +5,19 @@ import by.vsu.sdo.sql.SQL;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.List;
-import java.util.Scanner;
 
 public class Clients implements Runnable {
+    private static int clients_count = 0;
+    public User user;
     private String HOST = "localhost";
     private int PORT = 4444;
-    private static int clients_count = 0;
     private Server server;
     private DataInputStream auth;
     private DataOutputStream authMsg;
     private Socket clientSocket = null;
     private SQL sqlServer;
-    public User user;
 
     // конструктор, который принимает клиентский сокет и сервер
     public Clients(Socket socket, Server server) {
@@ -47,9 +45,9 @@ public class Clients implements Runnable {
                 if (wait == 1) {
                     String login = auth.readUTF();
                     String password = auth.readUTF();
-                    System.out.println(login+" Пытается подклчиться");
-                    List<String> list =  sqlServer.Authorization(login, password);
-                    if (list!=null) {
+                    System.out.println(login + " Пытается подклчиться");
+                    List<String> list = sqlServer.Authorization(login, password);
+                    if (list != null) {
                         user.userName = list.get(0);
                         user.idUser = Integer.valueOf(list.get(1));
                         authMsg.write(0);
@@ -69,18 +67,21 @@ public class Clients implements Runnable {
                     if (sqlServer.NewUser(newLogin, newPassword, newEmail)) {
                         System.out.println("Новый пользователь создан");
                         List<String> list = sqlServer.Authorization(newLogin, newPassword);
-                        if (list!=null) {
+                        if (list != null) {
                             user.userName = list.get(0);
                             user.idUser = Integer.valueOf(list.get(1));
                             authMsg.write(0);
                             authMsg.flush();
                             break;
                         }
-                    } else {System.out.println("Ошибка при создании пользователя");
-                    authMsg.write(1);
-                    authMsg.flush();
-                    close();}
-                }}
+                    } else {
+                        System.out.println("Ошибка при создании пользователя");
+                        authMsg.write(1);
+                        authMsg.flush();
+                        close();
+                    }
+                }
+            }
             //Получение списка чатов
            /* while (true) {
                 if (auth.readByte() == 3) {
@@ -100,19 +101,31 @@ public class Clients implements Runnable {
 */
             while (true) {
                 wait = auth.readByte();
-                if(wait==4) {
-                    sendUserList();
-                }
-                if (wait==5) {
-                    String clientMessage = auth.readUTF()+" "+auth.readUTF()+": "+auth.readUTF();
+                if (wait == 4) sendUserList();
+                if (wait == 5) {
+                    String clientMessage = auth.readUTF() + " " + auth.readUTF() + ": " + auth.readUTF();
                     System.out.println("Получено сообщение:");
                     System.out.println(clientMessage);
                     sqlServer.SaveMessage(user.idUser, clientMessage);
                     Thread.sleep(100);
                     server.sendMessageToAllClients(clientMessage);
-                    }
-                if (wait==6) {
+                }
+                if (wait == 6) {
                     break;
+                }
+                if(wait==8){
+                    List<String> chat = sqlServer.GetDialog();
+                    authMsg.writeByte(8);
+                    System.out.println("Отправка списка сообщений:");
+                    for(String line:chat){
+                        authMsg.writeUTF(line);
+                        System.out.println(line);
+                        authMsg.flush();
+                    }
+                    System.out.println("Конец списка");
+                    authMsg.writeUTF("end");
+                    authMsg.flush();
+
                 }
                 Thread.sleep(100);
             }
@@ -134,9 +147,9 @@ public class Clients implements Runnable {
     public void sendMsg(String msg) {
         try {
             authMsg.writeByte(5);
-            authMsg.writeUTF(msg+"\n");
+            authMsg.writeUTF(msg + "\n");
             authMsg.flush();
-            System.out.println("Сообщение \\ "+msg+" // было отправлено к "+user.userName);
+            System.out.println("Сообщение \\ " + msg + " // было отправлено к " + user.userName);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -147,20 +160,21 @@ public class Clients implements Runnable {
     public void close() {
         server.removeClient(this);
     }
-    public void sendUserList(){
-        List<String>list=server.SendUserList();
-            System.out.println("Отправка списка пользователей");
-            try {
-                authMsg.writeByte(4);
-                for (String line:list) {
-                    authMsg.writeUTF(line);
-                    System.out.println(line);
-                }
-                System.out.println("Количество пользователей: "+list.size());
-                authMsg.writeUTF("end");
-                authMsg.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
+
+    public void sendUserList() {
+        List<String> list = server.SendUserList();
+        System.out.println("Отправка списка пользователей");
+        try {
+            authMsg.writeByte(4);
+            for (String line : list) {
+                authMsg.writeUTF(line);
+                System.out.println(line);
             }
+            System.out.println("Количество пользователей: " + list.size());
+            authMsg.writeUTF("end");
+            authMsg.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+}

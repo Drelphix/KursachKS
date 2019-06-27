@@ -1,6 +1,5 @@
 package by.vsu.sdo.sql;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,14 +21,13 @@ public class SQL {
     public void StartSQL() {
         try {
             this.connection = connect(DRIVER, CONNECTION_STRING, ROOT, PASSWORD);
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("Database connection error");
         }
     }
 
     private java.sql.Connection connect(String Class, String URL, String USERNAME, String PASSWORD) {
-        java.sql.Connection con=null;
+        java.sql.Connection con = null;
         try {
             java.lang.Class.forName(Class);
         } catch (ClassNotFoundException e) {
@@ -41,14 +39,14 @@ public class SQL {
             System.out.println("Database connection error");
             System.exit(0);
         }
-       return con;
+        return con;
     }
 
 
     //сохранение чата в риал-тайме
     public void SaveMessage(int idUser, String message) {
         try {
-            connection.createStatement().executeUpdate("INSERT INTO messages (message,idUser) VALUES ('" + message + "','" + idUser +"')");
+            connection.createStatement().executeUpdate("INSERT INTO messages (message,idUser) VALUES ('" + message + "','" + idUser + "')");
         } catch (SQLException e) {
             System.out.println("SaveDialogError");
             e.printStackTrace();
@@ -87,20 +85,21 @@ public class SQL {
 
     // проверка входа
     public List<String> Authorization(String login, String password) {
-        System.out.println(login+" "+password);
+        System.out.println(login + " " + password);
         try {
-            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login+"' AND Password="+password+"");
+            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login + "' AND Password='" + String.valueOf(password) + "'");
             rsAuth.next();
-
+            if(rsAuth==null) return null;
             String dbLogin = rsAuth.getString("Login").toLowerCase();
             String dbPassword = rsAuth.getString("Password");
-            List<String> list = new  ArrayList<String>();
+            List<String> list = new ArrayList<String>();
             list.add(dbLogin);
             list.add(rsAuth.getString("Id"));
             rsAuth.next();
-            if((login.equalsIgnoreCase(dbLogin))&&(password.equals(dbPassword))){
-                System.out.println(dbLogin+", вход успешен");
-            return list ;}
+            if ((login.equalsIgnoreCase(dbLogin)) && (password.equals(dbPassword))) {
+                System.out.println(dbLogin + ", вход успешен");
+                return list;
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -110,7 +109,7 @@ public class SQL {
     //новый пользователь
     public boolean NewUser(String login, String password, String email) {
         try {
-            this.connection.createStatement().executeUpdate("INSERT INTO authorization (Login, Password, email) VALUES ('"+login+"','"+password+"','"+email+"')");
+            this.connection.createStatement().executeUpdate("INSERT INTO authorization (Login, Password, email) VALUES ('" + login + "','" + password + "','" + email + "')");
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -119,22 +118,17 @@ public class SQL {
     }
 
     //загрузка старого диалога
-    public List<String[]> GetDialog(String chatName) {
-        List<String[]> chat = new ArrayList<String[]>();
+    public List<String> GetDialog() {
+        List<String> chat = new ArrayList<String>();
         ResultSet rsChatMessages;
-        String[] message = new String[3];
         try {
-            rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages LEFT JOIN authorization messages.idUser=authorization.idUser" +
-                    " WHERE (idChat=" + GetChatListDB(chatName).getInt(0));
+            rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages");
+
             do {
-                // Сообщенька
-                message[0] = rsChatMessages.getString(1);
-                // Пользователь
-                message[1] = rsChatMessages.getString(6);
-                // Время
-                message[2] = rsChatMessages.getString(5);
                 rsChatMessages.next();
+                chat.add(rsChatMessages.getString("Message"));
             } while (!rsChatMessages.last());
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -3,31 +3,30 @@ package sample;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.SocketException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-public class Connect implements Runnable{
+public class Connect implements Runnable {
 
     private static final String HOST = "localhost"; // адрес сервера 192.168.137.1
     private static final int PORT = 4444; // порт
-
-    public Socket clientSocket; // клиентский сокет
     public static String userName;
-    private Scanner inMessage;
+    public Socket clientSocket; // клиентский сокет
     DataOutputStream outData;
     DataInputStream inData;
+    private Scanner inMessage;
 
-@Override
+    @Override
 
-public void run() {
-    Waiting();
-}
-    public boolean Connecting(){
+    public void run() {
+        Waiting();
+    }
+
+    public boolean Connecting() {
         try {
             clientSocket = new Socket(HOST, PORT); // подключаемся к серверу
         } catch (IOException e) {
@@ -38,7 +37,7 @@ public void run() {
         return true;
     }
 
-    public void Close(){
+    public void Close() {
         try {
             clientSocket.close();
         } catch (IOException e) {
@@ -47,10 +46,11 @@ public void run() {
     }
 
     public boolean Authorization(String login, String password) throws IOException {
-    return Authorization(login,password,null);
+        return Authorization(login, password, null);
     }
+
     public boolean Authorization(String login, String password, String email) throws IOException {
-        if(Connecting()) {
+        if (Connecting()) {
             outData = new DataOutputStream(clientSocket.getOutputStream());
             inData = new DataInputStream(clientSocket.getInputStream());
             if (email != null) {
@@ -62,10 +62,10 @@ public void run() {
 
             outData.writeUTF(login);
             outData.writeUTF(password);
-            System.out.println(login+password);
+            System.out.println(login + password);
             outData.flush();
             while (true) {
-                Byte answer=inData.readByte();
+                Byte answer = inData.readByte();
                 if (answer == 1) {
                     System.out.println("Логин неверен");
 
@@ -76,16 +76,19 @@ public void run() {
                     return true;
                 }
             }
-        } else {System.out.println("Сервер недоступен");
-        return false;}
+        } else {
+            System.out.println("Сервер недоступен");
+            return false;
+        }
 
     }
 
-    public boolean SendMessage(String message){
+    public boolean SendMessage(String message) {
         try {
             Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
             outData.writeByte(5);
-            outData.writeUTF(date.toString());
+            outData.writeUTF(formatter.format(date));
             outData.writeUTF(this.userName);
             outData.writeUTF(message);
             outData.flush();
@@ -95,33 +98,37 @@ public void run() {
             return false;
         }
     }
-    public List<String> GetList() {
+
+    public List<String> GetList(int i) {
         Byte wait;
-        List<String> list =new ArrayList<>() ;
+        List<String> list = new ArrayList<>();
         try {
-            outData.writeByte(4);
+            outData.writeByte(i);
             outData.flush();
             while (true) {
                 wait = inData.readByte();
-                if (wait == 4) {
+                if (wait == i) {
                     String line = inData.readUTF();
-                    while (true){
-                        if(!line.equalsIgnoreCase("end")){
-                        System.out.println(line);
-                        list.add(line);
-                        line = inData.readUTF();} else return list;
+                    while (true) {
+                        if (!line.equalsIgnoreCase("end")) {
+                            System.out.println(line);
+                            list.add(line);
+                            line = inData.readUTF();
+                        } else return list;
 
                     }
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } return list;
+        }
+        return list;
     }
-    public String Waiting(){
-        Byte wait=null;
+
+    public String Waiting() {
+        Byte wait = null;
         String message = null;
-        try{
+        try {
             while (true) {
                 wait = inData.readByte();
                 if (wait == 5) {
@@ -130,9 +137,10 @@ public void run() {
                     break;
                 }
             }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }return message;
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return message;
+
     }
+}

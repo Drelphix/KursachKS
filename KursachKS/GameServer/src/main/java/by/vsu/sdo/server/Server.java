@@ -3,7 +3,6 @@ package by.vsu.sdo.server;
 
 import by.vsu.sdo.sql.SQL;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -13,6 +12,7 @@ import java.util.List;
 public class Server {
     static final int PORT = 4444;
     private ArrayList<Clients> clients = new ArrayList<Clients>();
+
     public Server() {
         SQL sqlServer = new SQL();
         Socket clientSocket = null;
@@ -45,13 +45,15 @@ public class Server {
             }
         }
     }
-    public List<String> SendUserList(){
+
+    public List<String> SendUserList() {
         List<String> list = new ArrayList<>();
         for (Clients man : clients) {
             list.add(man.user.userName);
         }
         return list;
     }
+
     // отправляем сообщение всем клиентам
     public void sendMessageToAllClients(String msg) {
 
