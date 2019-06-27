@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class Controller {
 
@@ -52,18 +53,20 @@ public class Controller {
 
     @FXML
     void AboutForm(ActionEvent event) {
-
-    }
-
-    @FXML
-    void ExitLoginForm(ActionEvent event) {
         try {
-            blah = FXMLLoader.load(getClass().getResource("Form/LoginForm.fxml"));
-            Scene scene = new Scene(blah, 400, 350);
+            blah = FXMLLoader.load(getClass().getResource("Form/About.fxml"));
+            Scene scene = new Scene(blah, 450, 420);
             LoginController.NewScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void ExitLoginForm(ActionEvent event) {
+        Main.primaryStage.show();
+        Stage stage = (Stage) ExitLoginForm.getScene().getWindow();
+        stage.close();
     }
 
 

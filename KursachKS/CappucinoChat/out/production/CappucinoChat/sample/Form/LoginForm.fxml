@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -41,7 +42,6 @@
          </image>
       </ImageView>
       <TextField fx:id="LoginField" layoutX="136.0" layoutY="185.0" prefHeight="27.0" prefWidth="157.0" promptText="Login" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
-      <TextField fx:id="PasswordField" layoutX="136.0" layoutY="228.0" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
       <AnchorPane fx:id="ConnectionMessage" layoutX="103.0" layoutY="146.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickMessageConnection" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #ff9100; -fx-background-radius: 8;" visible="false">
          <children>
             <Label layoutX="28.0" layoutY="14.0" text="Server is not available" textFill="WHITE">
@@ -56,5 +56,6 @@
             </Label>
          </children>
       </AnchorPane>
+      <PasswordField fx:id="PasswordField" layoutX="136.0" layoutY="228.0" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
    </children>
 </AnchorPane>
