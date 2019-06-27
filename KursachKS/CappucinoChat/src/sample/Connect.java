@@ -123,6 +123,7 @@ public void run() {
         String message = null;
         try{
             while (true) {
+                wait = inData.readByte();
                 if (wait == 5) {
                     message = inData.readUTF();
                     System.out.println(message);

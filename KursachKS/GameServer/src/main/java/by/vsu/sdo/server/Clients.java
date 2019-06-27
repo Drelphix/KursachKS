@@ -68,10 +68,14 @@ public class Clients implements Runnable {
                     String newPassword = auth.readUTF();
                     if (sqlServer.NewUser(newLogin, newPassword, newEmail)) {
                         System.out.println("Новый пользователь создан");
-                        sqlServer.Authorization(newLogin, newPassword);
-                        authMsg.write(0);
-                        authMsg.flush();
-                        break;
+                        List<String> list = sqlServer.Authorization(newLogin, newPassword);
+                        if (list!=null) {
+                            user.userName = list.get(0);
+                            user.idUser = Integer.valueOf(list.get(1));
+                            authMsg.write(0);
+                            authMsg.flush();
+                            break;
+                        }
                     } else {System.out.println("Ошибка при создании пользователя");
                     authMsg.write(1);
                     authMsg.flush();
@@ -96,7 +100,6 @@ public class Clients implements Runnable {
 */
             while (true) {
                 wait = auth.readByte();
-
                 if(wait==4) {
                     sendUserList();
                 }
@@ -104,7 +107,7 @@ public class Clients implements Runnable {
                     String clientMessage = auth.readUTF()+" "+auth.readUTF()+": "+auth.readUTF();
                     System.out.println("Получено сообщение:");
                     System.out.println(clientMessage);
-                    sqlServer.SaveMessage(user.idUser, user.idChat, clientMessage);
+                    sqlServer.SaveMessage(user.idUser, clientMessage);
                     Thread.sleep(100);
                     server.sendMessageToAllClients(clientMessage);
                     }
