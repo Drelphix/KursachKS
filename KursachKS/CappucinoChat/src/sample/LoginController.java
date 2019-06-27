@@ -81,6 +81,7 @@ public class LoginController {
     void ShowSignUP(ActionEvent event) {
         try {
             blah = FXMLLoader.load(getClass().getResource("Form/RegisterForm.fxml"));
+
         } catch (IOException e) {
             e.printStackTrace();
         }

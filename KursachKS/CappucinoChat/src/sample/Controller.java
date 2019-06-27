@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -81,12 +84,14 @@ public class Controller {
         } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!"+"\n"+message);
 
     }
-
+    @FXML
+    public void GetChatList(){
+        ObservableList<String> observableList = FXCollections.observableList(Main.connect.GetList());
+        ListViewUser.setItems(observableList);
+    }
     void GetNewMessage(String message){
             SendMessageTextArea.setText("Добро пожаловать в чат");
             ListViewMessage.appendText(message);
-
-
 }
 
 
@@ -99,6 +104,6 @@ public class Controller {
         assert SendMessageTextArea != null : "fx:id=\"SendMessageTextArea\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ClearMessageButton != null : "fx:id=\"ClearMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageButton != null : "fx:id=\"SendMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
-
+        GetChatList();
     }
 }
