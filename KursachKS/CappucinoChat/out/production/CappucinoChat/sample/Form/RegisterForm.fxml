@@ -37,24 +37,14 @@
             <Image url="@Image/Password.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="PasswordFieldReg2" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="EmailFieldView" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Image/Password.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="PasswordFieldRegDone1" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@Image/CheckPassword.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="PasswordFieldRegDone2" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" visible="false">
-         <image>
-            <Image url="@Image/CheckPassword.png" />
+            <Image url="@Image/Email.png" />
          </image>
       </ImageView>
       <TextField fx:id="LoginField" layoutX="138.0" layoutY="162.0" prefHeight="27.0" prefWidth="157.0" promptText="Login" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
       <JFXButton fx:id="BackLoginForm" layoutX="111.0" layoutY="314.0" onAction="#BackLoginForm" prefHeight="25.0" prefWidth="186.0" ripplerFill="#f6d155" style="-fx-background-color: #f6d155; -fx-background-radius: 8;" text="Back" textFill="WHITE" />
       <PasswordField fx:id="PasswordField1" layoutX="138.0" layoutY="201.0" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
-      <PasswordField fx:id="PasswordField2" layoutX="138.0" layoutY="240.0" prefHeight="27.0" prefWidth="157.0" promptText="Confirm Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+      <TextField fx:id="EmailField" layoutX="138.0" layoutY="240.0" prefHeight="27.0" prefWidth="157.0" promptText="Email" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
    </children>
 </AnchorPane>

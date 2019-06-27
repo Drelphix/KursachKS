@@ -37,7 +37,7 @@
             <Image url="@Image/Password.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="EmailField" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="EmailFieldView" fitHeight="30.0" fitWidth="28.0" layoutX="109.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Image/Email.png" />
          </image>
