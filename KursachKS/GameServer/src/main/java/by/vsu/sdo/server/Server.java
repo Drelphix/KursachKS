@@ -22,6 +22,7 @@ public class Server {
             serverSocket = new ServerSocket(PORT);
             System.out.println("Сервер запущен!");
             sqlServer.StartSQL();
+            System.out.println("SQL-сервер подключен!");
             while (true) {
                 clientSocket = serverSocket.accept();
 
