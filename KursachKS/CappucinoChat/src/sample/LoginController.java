@@ -22,7 +22,7 @@ public class LoginController {
 
     public static boolean Mode = true;
     Parent blah = null;
-    Connect connect = new Connect();
+    Connect connect = Main.connect;
 
     @FXML
     private ResourceBundle resources;

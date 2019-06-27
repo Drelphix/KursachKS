@@ -7,6 +7,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.List;
 import java.util.Scanner;
 
 public class Clients implements Runnable {
@@ -14,8 +15,6 @@ public class Clients implements Runnable {
     private int PORT = 4444;
     private static int clients_count = 0;
     private Server server;
-    private PrintWriter outMessage;
-    private Scanner inMessage;
     private DataInputStream auth;
     private DataOutputStream authMsg;
     private Socket clientSocket = null;
@@ -31,8 +30,6 @@ public class Clients implements Runnable {
             clients_count++;
             this.server = server;
             this.clientSocket = socket;
-            this.outMessage = new PrintWriter(socket.getOutputStream());
-            this.inMessage = new Scanner(socket.getInputStream());
             this.auth = new DataInputStream(socket.getInputStream());
             this.authMsg = new DataOutputStream(socket.getOutputStream());
             System.out.println("Новый клиент присоединился");
@@ -44,14 +41,19 @@ public class Clients implements Runnable {
     @Override
     public void run() {
         try {
-
+            Byte wait;
             while (true) {
-                if (auth.readByte() == 1) {
+                wait = auth.readByte();
+                if (wait == 1) {
                     String login = auth.readUTF();
                     String password = auth.readUTF();
-                    if (sqlServer.Authorization(login, password)) {
+                    System.out.println(login+" Пытается подклчиться");
+                    List<String> list =  sqlServer.Authorization(login, password);
+                    if (list!=null) {
                         server.sendMessageToAllClients(login + " вошёл в чат!");
                         server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
+                        user.userName = list.get(0);
+                        user.idUser = Integer.valueOf(list.get(1));
                         authMsg.write(0);
                         authMsg.flush();
                         break;
@@ -61,17 +63,22 @@ public class Clients implements Runnable {
                         close();
                     }
                     // Новый пользователь
-                } else if (auth.readByte() == 2) {
+                }
+                if (wait == 2) {
                     String newEmail = auth.readUTF();
                     String newLogin = auth.readUTF();
                     String newPassword = auth.readUTF();
                     if (sqlServer.NewUser(newLogin, newPassword, newEmail)) {
                         System.out.println("Новый пользователь создан");
                         sqlServer.Authorization(newLogin, newPassword);
+                        authMsg.write(0);
+                        authMsg.flush();
                         break;
-                    } else System.out.println("Ошибка при создании пользователя");
-                }
-            }
+                    } else {System.out.println("Ошибка при создании пользователя");
+                    authMsg.write(1);
+                    authMsg.flush();
+                    close();}
+                }}
             //Получение списка чатов
            /* while (true) {
                 if (auth.readByte() == 3) {
@@ -90,16 +97,17 @@ public class Clients implements Runnable {
             }
 */
             while (true) {
-                // Если от клиента пришло сообщение
-                if (inMessage.hasNext()) {
-                    String clientMessage = inMessage.nextLine();
-
-                    if (clientMessage.equalsIgnoreCase("##session##end##")) {
-                        break;
-                    }
-                    sqlServer.SaveMessage(user.idUser, user.idChat, clientMessage);
+                wait = auth.readByte();
+                if (wait==5) {
+                    String clientMessage = auth.readUTF()+" "+auth.readUTF()+": "+auth.readUTF();
+                    System.out.println("Получено сообщение:");
                     System.out.println(clientMessage);
+                    sqlServer.SaveMessage(user.idUser, user.idChat, clientMessage);
+                    Thread.sleep(100);
                     server.sendMessageToAllClients(clientMessage);
+                    }
+                if (wait==6) {
+                    break;
                 }
                 Thread.sleep(100);
             }
@@ -107,7 +115,7 @@ public class Clients implements Runnable {
             ex.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Клиент вошел и сразу же вышел");
+            System.out.println("Клиент разорвал соединение");
         } /*catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Чат не найден");
@@ -120,8 +128,10 @@ public class Clients implements Runnable {
     // отправляем сообщение
     public void sendMsg(String msg) {
         try {
-            outMessage.println(msg);
-            outMessage.flush();
+            authMsg.writeByte(5);
+            authMsg.writeUTF(msg);
+            authMsg.flush();
+            System.out.println("Сообщение \\ "+msg+" // было отправлено к "+user.userName);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

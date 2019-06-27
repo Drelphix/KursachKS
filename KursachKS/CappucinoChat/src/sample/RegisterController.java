@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 public class RegisterController {
     Parent blah = null;
-    Connect connect = new Connect();
+    Connect connect = Main.connect;
 
     @FXML
     private ResourceBundle resources;
@@ -71,7 +71,7 @@ public class RegisterController {
     @FXML
     void CreateAccount(ActionEvent event) {
         try {
-            if(connect.Authorization(LoginField.toString(), PasswordField.toString())){
+            if(connect.Authorization(LoginField.getText(), PasswordField.getText(),PasswordField1.getText())){
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);

@@ -48,7 +48,7 @@ public class SQL {
     //сохранение чата в риал-тайме
     public void SaveMessage(int idUser, int idChat, String message) {
         try {
-            connection.createStatement().executeQuery("INSERT INTO messages (message,idUser,idChat) VALUES (" + message + "," + idUser + "," + idChat + ")");
+            connection.createStatement().executeUpdate("INSERT INTO messages (message,idUser,idChat) VALUES ('" + message + "','" + idUser + "','" + idChat + "')");
         } catch (SQLException e) {
             System.out.println("SaveDialogError");
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class SQL {
     public int newChat(String chatName) {
         int id = 0;
         try {
-            connection.createStatement().executeQuery("INSERT INTO chat (chatName) VALUES (" + chatName + ")");
+            connection.createStatement().executeUpdate("INSERT INTO chat (chatName) VALUES (" + chatName + ")");
             id = GetChatListDB(chatName).getInt(0);
         } catch (SQLException e) {
             System.out.println("NewChatError");
@@ -86,28 +86,34 @@ public class SQL {
 
 
     // проверка входа
-    public boolean Authorization(String login, String password) {
+    public List<String> Authorization(String login, String password) {
         System.out.println(login+" "+password);
         try {
-            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT Login,Password FROM authorization WHERE Login='" + login+"'");
+            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login+"'");
             rsAuth.next();
             String dbLogin = rsAuth.getString("Login").toLowerCase();
             String dbPassword = rsAuth.getString("Password");
-
+            List<String> list = new  ArrayList<String>();
+            list.add(dbLogin);
+            list.add(rsAuth.getString("Id"));
             if((login.equalsIgnoreCase(dbLogin))&&(password.equals(dbPassword))){
                 System.out.println(dbLogin+", вход успешен");
-            return true;}
+            return list ;}
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return false;
+        return null;
     }
 
     //новый пользователь
     public boolean NewUser(String login, String password, String email) {
-
-        return true;
+        try {
+            this.connection.createStatement().executeUpdate("INSERT INTO authorization (Login, Password, email) VALUES ('"+login+"','"+password+"','"+email+"')");
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     //загрузка старого диалога

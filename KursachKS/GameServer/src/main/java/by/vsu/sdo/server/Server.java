@@ -47,10 +47,10 @@ public class Server {
 
     // отправляем сообщение всем клиентам
     public void sendMessageToAllClients(String msg) {
+
         for (Clients man : clients) {
             man.sendMsg(msg);
         }
-
     }
 
     // удаляем клиента из коллекции при выходе из чата

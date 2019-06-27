@@ -5,13 +5,27 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketException;
+import java.util.Date;
+import java.util.Scanner;
 
-public class Connect{
+public class Connect implements Runnable{
+
     private static final String HOST = "localhost"; // адрес сервера 192.168.137.1
     private static final int PORT = 4444; // порт
+
     public Socket clientSocket; // клиентский сокет
+    public static String userName;
+    Controller controller = new Controller();
+    private Scanner inMessage;
+    DataOutputStream outData;
+    DataInputStream inData;
 
+@Override
 
+public void run() {
+    Waiting();
+}
     public boolean Connecting(){
         try {
             clientSocket = new Socket(HOST, PORT); // подключаемся к серверу
@@ -36,10 +50,11 @@ public class Connect{
     }
     public boolean Authorization(String login, String password, String email) throws IOException {
         if(Connecting()) {
-            DataOutputStream outData = new DataOutputStream(clientSocket.getOutputStream());
-            DataInputStream inData = new DataInputStream(clientSocket.getInputStream());
+            outData = new DataOutputStream(clientSocket.getOutputStream());
+            inData = new DataInputStream(clientSocket.getInputStream());
             if (email != null) {
                 outData.writeByte(2);
+                outData.writeUTF(email);
             } else {
                 outData.writeByte(1);
             }
@@ -49,11 +64,14 @@ public class Connect{
             System.out.println(login+password);
             outData.flush();
             while (true) {
-                if (inData.readByte() == 1) {
+                Byte answer=inData.readByte();
+                if (answer == 1) {
                     System.out.println("Логин неверен");
+
                     return false;
-                } else if (inData.readByte() == 0) {
+                } else if (answer == 0) {
                     System.out.println("Логин успешен");
+                    this.userName = login;
                     return true;
                 }
             }
@@ -62,5 +80,38 @@ public class Connect{
 
     }
 
+    public boolean SendMessage(String message){
+        try {
+            Date date = new Date();
+            outData.writeByte(5);
+            outData.writeUTF(date.toString());
+            outData.writeUTF(this.userName);
+            outData.writeUTF(message);
+            outData.flush();
+            Waiting();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
-}
+    public void Waiting(){
+        Byte wait;
+            try {
+                while (true){
+                wait = inData.readByte();
+                System.out.println(wait);
+                if (wait==5){
+                    String message = inData.readUTF();
+
+                    controller.GetNewMessage(message);
+                        break;
+                }
+            }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }

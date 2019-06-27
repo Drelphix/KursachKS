@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextArea;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -56,18 +57,18 @@ public class Controller {
 
     @FXML
     void SendMessageButton(ActionEvent event) {
-        Chat chat = new Chat();
         String message = SendMessageTextArea.getText();
-        String text = ListViewMessage.getText();
-        if(chat.SendMessage(message)){
-         GetNewMessage(message);
-        } else ListViewMessage.setText(text+"/n"+"!!!Сообщение не было отправлено!!!"+"/n"+message);
+
+        if(Main.connect.SendMessage(message)){
+        } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!"+"\n"+message);
 
     }
 
     void GetNewMessage(String message){
-        String text = ListViewMessage.getText();
-        ListViewMessage.setText(text+"/n"+message);
+            ListViewMessage.setText("Добро пожаловать в чат");
+            ListViewMessage.appendText(message);
+
+
     }
 
     @FXML
