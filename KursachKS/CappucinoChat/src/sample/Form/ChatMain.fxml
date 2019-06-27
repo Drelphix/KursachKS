@@ -32,6 +32,7 @@
                </font>
             </Label>
             <JFXButton fx:id="ExitLoginForm" layoutX="523.0" layoutY="8.0" onAction="#ExitLoginForm" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6c4f3d;" text="Exit" textFill="WHITE" />
+            <JFXButton fx:id="AboutForm" layoutX="443.0" layoutY="8.0" onAction="#AboutForm" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6c4f3d;" text="About" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane layoutY="39.0" prefHeight="280.0" prefWidth="600.0">
