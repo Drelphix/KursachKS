@@ -1,5 +1,6 @@
 package by.vsu.sdo.sql;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,30 +20,35 @@ public class SQL {
 
     //подключение
     public void StartSQL() {
-        connection = connect(DRIVER, CONNECTION_STRING, ROOT, PASSWORD);
+        try {
+            this.connection = connect(DRIVER, CONNECTION_STRING, ROOT, PASSWORD);
+        }
+        catch (NullPointerException e){
+            System.out.println("Database connection error");
+        }
     }
 
     private java.sql.Connection connect(String Class, String URL, String USERNAME, String PASSWORD) {
+        java.sql.Connection con=null;
         try {
             java.lang.Class.forName(Class);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (SQLException e) {
             System.out.println("Database connection error");
             System.exit(0);
         }
-
-        return this.connection;
+       return con;
     }
 
 
     //сохранение чата в риал-тайме
     public void SaveMessage(int idUser, int idChat, String message) {
         try {
-            connection.createStatement().executeQuery("INSERT INTO messages (message,idUser,idChat) VALUES (" + message + "," + idUser + "," + idChat + ")");
+            connection.createStatement().executeUpdate("INSERT INTO messages (message,idUser,idChat) VALUES ('" + message + "','" + idUser + "','" + idChat + "')");
         } catch (SQLException e) {
             System.out.println("SaveDialogError");
             e.printStackTrace();
@@ -54,7 +60,7 @@ public class SQL {
     public int newChat(String chatName) {
         int id = 0;
         try {
-            connection.createStatement().executeQuery("INSERT INTO chat (chatName) VALUES (" + chatName + ")");
+            connection.createStatement().executeUpdate("INSERT INTO chat (chatName) VALUES (" + chatName + ")");
             id = GetChatListDB(chatName).getInt(0);
         } catch (SQLException e) {
             System.out.println("NewChatError");
@@ -81,24 +87,33 @@ public class SQL {
 
     // проверка входа
     public List<String> Authorization(String login, String password) {
-        ResultSet rsAuth = null;
-        List<String> user = null;
+        System.out.println(login+" "+password);
         try {
-            rsAuth = connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login=" + login + ",Password=" + password);
-            for (int i = 0; i < 5; i++) {
-                user.add(rsAuth.getString(i));
-            }
+            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login+"'");
+            rsAuth.next();
+            String dbLogin = rsAuth.getString("Login").toLowerCase();
+            String dbPassword = rsAuth.getString("Password");
+            List<String> list = new  ArrayList<String>();
+            list.add(dbLogin);
+            list.add(rsAuth.getString("Id"));
+            if((login.equalsIgnoreCase(dbLogin))&&(password.equals(dbPassword))){
+                System.out.println(dbLogin+", вход успешен");
+            return list ;}
         } catch (SQLException e) {
-            System.out.println("Auth error");
             e.printStackTrace();
         }
-        return user;
+        return null;
     }
 
     //новый пользователь
     public boolean NewUser(String login, String password, String email) {
-
-        return true;
+        try {
+            this.connection.createStatement().executeUpdate("INSERT INTO authorization (Login, Password, email) VALUES ('"+login+"','"+password+"','"+email+"')");
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     //загрузка старого диалога

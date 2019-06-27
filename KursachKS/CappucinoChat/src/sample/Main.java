@@ -13,6 +13,7 @@ public class Main extends Application {
 
     public static Stage primaryStage;
     public Parent root;
+    public static Connect connect = new Connect();
 
     public static void main(String[] args) {
         launch(args);
@@ -27,5 +28,6 @@ public class Main extends Application {
         Scene scene = new Scene(new Group(root), 600, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 }

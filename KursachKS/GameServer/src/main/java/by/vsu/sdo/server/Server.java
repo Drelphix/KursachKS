@@ -21,8 +21,7 @@ public class Server {
             // создаём серверный сокет
             serverSocket = new ServerSocket(PORT);
             System.out.println("Сервер запущен!");
-            sqlServer.StartSQL();
-            System.out.println("SQL-сервер подключен!");
+
             while (true) {
                 clientSocket = serverSocket.accept();
 
@@ -48,10 +47,10 @@ public class Server {
 
     // отправляем сообщение всем клиентам
     public void sendMessageToAllClients(String msg) {
+
         for (Clients man : clients) {
             man.sendMsg(msg);
         }
-
     }
 
     // удаляем клиента из коллекции при выходе из чата
