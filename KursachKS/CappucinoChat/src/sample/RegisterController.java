@@ -13,7 +13,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.scene.input.MouseEvent;
 
 public class RegisterController {
     Parent blah = null;
@@ -43,6 +45,13 @@ public class RegisterController {
     @FXML
     private TextField EmailField;
 
+    @FXML
+    private AnchorPane UsernameUse;
+
+    @FXML
+    void ClickMessageUsernameUse(MouseEvent event) {
+        UsernameUse.setVisible(false);
+    }
 
     @FXML
     void BackLoginForm(ActionEvent event) {
@@ -59,9 +68,10 @@ public class RegisterController {
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);
-            }
+            }else{UsernameUse.setVisible(true);}
         } catch (IOException e) {
             e.printStackTrace();
+
         }
     }
 
