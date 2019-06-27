@@ -101,9 +101,7 @@ public class Clients implements Runnable {
 */
             while (true) {
                 wait = auth.readByte();
-                if (wait == 4) {
-                    sendUserList();
-                }
+                if (wait == 4) sendUserList();
                 if (wait == 5) {
                     String clientMessage = auth.readUTF() + " " + auth.readUTF() + ": " + auth.readUTF();
                     System.out.println("Получено сообщение:");
@@ -114,6 +112,20 @@ public class Clients implements Runnable {
                 }
                 if (wait == 6) {
                     break;
+                }
+                if(wait==8){
+                    List<String> chat = sqlServer.GetDialog();
+                    authMsg.writeByte(8);
+                    System.out.println("Отправка списка сообщений:");
+                    for(String line:chat){
+                        authMsg.writeUTF(line);
+                        System.out.println(line);
+                        authMsg.flush();
+                    }
+                    System.out.println("Конец списка");
+                    authMsg.writeUTF("end");
+                    authMsg.flush();
+
                 }
                 Thread.sleep(100);
             }

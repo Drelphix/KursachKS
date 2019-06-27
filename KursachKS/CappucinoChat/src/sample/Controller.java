@@ -3,12 +3,6 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextArea;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.Date;
-import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,31 +12,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
 public class Controller {
-
-    Parent blah = null;
-
-    @FXML
-    private JFXButton ExitLoginForm;
-
-    @FXML
-    private JFXButton AboutForm;
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     public JFXTextArea ListViewMessage;
-
-    @FXML
-    private JFXListView<String> ListViewUser;
-
     @FXML
     public JFXTextArea SendMessageTextArea;
-
+    Parent blah = null;
+    @FXML
+    private JFXButton ExitLoginForm;
+    @FXML
+    private JFXButton AboutForm;
+    @FXML
+    private ResourceBundle resources;
+    @FXML
+    private URL location;
+    @FXML
+    private JFXListView<String> ListViewUser;
     @FXML
     private JFXButton ClearMessageButton;
 
@@ -78,21 +69,31 @@ public class Controller {
     void SendMessageButton(ActionEvent event) {
         String message = SendMessageTextArea.getText();
 
-        if(Main.connect.SendMessage(message)){
-            message=Main.connect.Waiting();
+        if (Main.connect.SendMessage(message)) {
+            message = Main.connect.Waiting();
             ListViewMessage.appendText(message);
-        } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!"+"\n"+message);
+        } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!" + "\n" + message);
 
     }
+
     @FXML
-    public void GetChatList(){
-        ObservableList<String> observableList = FXCollections.observableList(Main.connect.GetList());
+    public void GetChatList() {
+        ObservableList<String> observableList = FXCollections.observableList(Main.connect.GetList(4));
         ListViewUser.setItems(observableList);
     }
-    void GetNewMessage(String message){
-            SendMessageTextArea.setText("Добро пожаловать в чат");
-            ListViewMessage.appendText(message);
-}
+    @FXML
+    public void GetMessageList(){
+        List<String> messageList =(Main.connect.GetList(8));
+
+        for(String message:messageList){
+            ListViewMessage.appendText(message+"\n");
+        }
+    }
+
+    void GetNewMessage(String message) {
+        SendMessageTextArea.setText("Добро пожаловать в чат");
+        ListViewMessage.appendText(message);
+    }
 
 
     @FXML
@@ -105,5 +106,6 @@ public class Controller {
         assert ClearMessageButton != null : "fx:id=\"ClearMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageButton != null : "fx:id=\"SendMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         GetChatList();
+        GetMessageList();
     }
 }

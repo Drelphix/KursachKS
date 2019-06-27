@@ -89,7 +89,7 @@ public class SQL {
         try {
             ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login + "' AND Password='" + String.valueOf(password) + "'");
             rsAuth.next();
-
+            if(rsAuth==null) return null;
             String dbLogin = rsAuth.getString("Login").toLowerCase();
             String dbPassword = rsAuth.getString("Password");
             List<String> list = new ArrayList<String>();
@@ -121,13 +121,14 @@ public class SQL {
     public List<String> GetDialog() {
         List<String> chat = new ArrayList<String>();
         ResultSet rsChatMessages;
-        String[] message = new String[3];
         try {
             rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages");
+
             do {
                 rsChatMessages.next();
                 chat.add(rsChatMessages.getString("Message"));
             } while (!rsChatMessages.last());
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
