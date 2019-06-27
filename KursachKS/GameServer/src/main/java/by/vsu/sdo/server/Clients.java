@@ -50,8 +50,6 @@ public class Clients implements Runnable {
                     System.out.println(login+" Пытается подклчиться");
                     List<String> list =  sqlServer.Authorization(login, password);
                     if (list!=null) {
-                        server.sendMessageToAllClients(login + " вошёл в чат!");
-                        server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
                         user.userName = list.get(0);
                         user.idUser = Integer.valueOf(list.get(1));
                         authMsg.write(0);
@@ -129,7 +127,7 @@ public class Clients implements Runnable {
     public void sendMsg(String msg) {
         try {
             authMsg.writeByte(5);
-            authMsg.writeUTF(msg);
+            authMsg.writeUTF(msg+"\n");
             authMsg.flush();
             System.out.println("Сообщение \\ "+msg+" // было отправлено к "+user.userName);
         } catch (Exception ex) {

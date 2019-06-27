@@ -25,13 +25,13 @@ public class Controller {
     private URL location;
 
     @FXML
-    private JFXTextArea ListViewMessage;
+    public JFXTextArea ListViewMessage;
 
     @FXML
-    private JFXListView<?> ListViewUser;
+    private JFXListView<String> ListViewUser;
 
     @FXML
-    private JFXTextArea SendMessageTextArea;
+    public JFXTextArea SendMessageTextArea;
 
     @FXML
     private JFXButton ClearMessageButton;
@@ -55,21 +55,24 @@ public class Controller {
         }
     }
 
+
     @FXML
     void SendMessageButton(ActionEvent event) {
         String message = SendMessageTextArea.getText();
 
         if(Main.connect.SendMessage(message)){
+            message=Main.connect.Waiting();
+            ListViewMessage.appendText(message);
         } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!"+"\n"+message);
 
     }
 
     void GetNewMessage(String message){
-            ListViewMessage.setText("Добро пожаловать в чат");
+            SendMessageTextArea.setText("Добро пожаловать в чат");
             ListViewMessage.appendText(message);
 
 
-    }
+}
 
     @FXML
     void initialize() {
@@ -78,6 +81,5 @@ public class Controller {
         assert SendMessageTextArea != null : "fx:id=\"SendMessageTextArea\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ClearMessageButton != null : "fx:id=\"ClearMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageButton != null : "fx:id=\"SendMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
-
     }
 }

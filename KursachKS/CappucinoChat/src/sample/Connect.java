@@ -16,7 +16,6 @@ public class Connect implements Runnable{
 
     public Socket clientSocket; // клиентский сокет
     public static String userName;
-    Controller controller = new Controller();
     private Scanner inMessage;
     DataOutputStream outData;
     DataInputStream inData;
@@ -88,7 +87,6 @@ public void run() {
             outData.writeUTF(this.userName);
             outData.writeUTF(message);
             outData.flush();
-            Waiting();
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -96,22 +94,22 @@ public void run() {
         }
     }
 
-    public void Waiting(){
+    public String Waiting(){
         Byte wait;
+        String message = null;
             try {
                 while (true){
                 wait = inData.readByte();
                 System.out.println(wait);
                 if (wait==5){
-                    String message = inData.readUTF();
-
-                    controller.GetNewMessage(message);
-                        break;
+                     message= inData.readUTF();
+                    System.out.println(message);
+                    break;
                 }
             }
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }return message;
 
         }
     }
