@@ -123,11 +123,10 @@ public class SQL {
         ResultSet rsChatMessages;
         try {
             rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages");
-
-            do {
+            do{
                 rsChatMessages.next();
                 chat.add(rsChatMessages.getString("Message"));
-            } while (!rsChatMessages.last());
+            } while (!rsChatMessages.isLast());
 
         } catch (SQLException e) {
             e.printStackTrace();
