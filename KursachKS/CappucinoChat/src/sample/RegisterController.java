@@ -1,10 +1,6 @@
 package sample;
 
 import com.jfoenix.controls.JFXButton;
-
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +9,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.scene.input.MouseEvent;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class RegisterController {
     Parent blah = null;
@@ -64,11 +64,13 @@ public class RegisterController {
     @FXML
     void CreateAccount(ActionEvent event) {
         try {
-            if(connect.Authorization(LoginField.getText(), PasswordField1.getText(),EmailField.getText())){
+            if (connect.Authorization(LoginField.getText(), PasswordField1.getText(), EmailField.getText())) {
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);
-            }else{UsernameUse.setVisible(true);}
+            } else {
+                UsernameUse.setVisible(true);
+            }
         } catch (IOException e) {
             e.printStackTrace();
 
