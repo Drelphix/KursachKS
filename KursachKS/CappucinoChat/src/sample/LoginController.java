@@ -57,13 +57,14 @@ public class LoginController {
     void LoginInServer(ActionEvent event) {
 
         try {
-            if(connect.Authorization(LoginField.toString(), PasswordField.toString())){
+            if(connect.Authorization(LoginField.getText(), PasswordField.getText())){
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 NewScene(scene);
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
+            connect.Close();
         }
         //ConnectionMessage.setVisible(true);
     }

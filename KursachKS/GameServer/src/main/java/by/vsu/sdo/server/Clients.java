@@ -26,6 +26,7 @@ public class Clients implements Runnable {
     public Clients(Socket socket, Server server) {
         try {
             this.sqlServer = new SQL();
+            sqlServer.StartSQL();
             this.user = new User();
             clients_count++;
             this.server = server;
@@ -45,12 +46,10 @@ public class Clients implements Runnable {
         try {
 
             while (true) {
-                //Авторизация
                 if (auth.readByte() == 1) {
                     String login = auth.readUTF();
                     String password = auth.readUTF();
-
-                    if (user.auth(login, password)) {
+                    if (sqlServer.Authorization(login, password)) {
                         server.sendMessageToAllClients(login + " вошёл в чат!");
                         server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
                         authMsg.write(0);
@@ -68,7 +67,7 @@ public class Clients implements Runnable {
                     String newPassword = auth.readUTF();
                     if (sqlServer.NewUser(newLogin, newPassword, newEmail)) {
                         System.out.println("Новый пользователь создан");
-                        user.auth(newLogin, newPassword);
+                        sqlServer.Authorization(newLogin, newPassword);
                         break;
                     } else System.out.println("Ошибка при создании пользователя");
                 }

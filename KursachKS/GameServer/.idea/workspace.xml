@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="">
+    <list default="true" id="0900f72f-1e2e-42db-bbb0-9e60b8512f4a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CappucinoChat/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Chat.java" afterDir="false" />
-<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CappucinoChat/src/sample/Controller.java" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,12 +35,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - Chat@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -47,8 +46,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="245">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1709#1710#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+              <folding>
+                <element signature="e#119#120#0" expanded="true" />
+                <element signature="e#163#164#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,106 +83,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-            <state relative-caret-position="425">
-              <caret line="103" column="64" lean-forward="true" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
-=======
-            <state relative-caret-position="-1173">
-              <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="72" />
->>>>>>> Stashed changes
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
+            <state relative-caret-position="274">
+              <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-    <option name="AUTO_COMMIT_ON_CHERRY_PICK" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/MultiThreadServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/MonoThreadClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Connection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/ClientHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Clients.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/Room/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f54657ee-3581-413b-a89e-930d86d1e11f/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="332" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1612" />
     <option name="height" value="876" />
   </component>
@@ -168,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,22 +199,14 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -262,39 +220,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.vsu.sdo.Application" />
-      <module name="Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.vsu.sdo.Main" />
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MultiThreadServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.vsu.sdo.MultiThreadServer" />
-      <module name="Application" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.vsu.sdo.sql.*" />
+          <option name="PATTERN" value="by.vsu.sdo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -305,8 +237,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MultiThreadServer" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -315,35 +245,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="11885000-d7c8-413d-9fad-eb3b3e074a38" name="Default Changelist" comment="" />
-      <created>1560708701086</created>
+      <changelist id="0900f72f-1e2e-42db-bbb0-9e60b8512f4a" name="Default Changelist" comment="" />
+      <created>1561620734259</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1560708701086</updated>
-      <workItem from="1560708703892" duration="5812000" />
-      <workItem from="1560719942128" duration="675000" />
-      <workItem from="1561123116640" duration="558000" />
-      <workItem from="1561217315554" duration="335000" />
-      <workItem from="1561217856641" duration="762000" />
-      <workItem from="1561285284580" duration="22117000" />
-      <workItem from="1561445555835" duration="2612000" />
-      <workItem from="1561558213472" duration="334000" />
-      <workItem from="1561559032157" duration="2250000" />
+      <updated>1561620734259</updated>
+      <workItem from="1561620738361" duration="5746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< Updated upstream
-    <option name="totallyTimeSpent" value="37684000" />
-=======
-    <option name="totallyTimeSpent" value="38458000" />
->>>>>>> Stashed changes
+    <option name="totallyTimeSpent" value="6159000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -352,16 +270,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -377,71 +295,108 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="LIMIT_HISTORY" value="false" />
-    <MESSAGE value="dsf" />
-    <option name="LAST_COMMIT_MESSAGE" value="dsf" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Application.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/MultiThreadServer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/MonoThreadClientHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Connection.java" />
-    <entry file="file://E:/Deshifr/Deshifr/src/sample/Connection.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/net/AbstractPlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" selection-start-line="7" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="184">
+          <caret line="666" selection-start-line="666" selection-end-line="666" />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/net/SocketOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+        <state relative-caret-position="371">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/Users.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/io/DataOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="e#163#164#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="167">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Room/Room.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Room.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f54657ee-3581-413b-a89e-930d86d1e11f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="510">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/User.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/78490449-4050-4d37-9209-7924716cc73a/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/Deshifr/Deshifr/src/sample/BDViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="884">
+          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1709#1710#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#119#120#0" expanded="true" />
+            <element signature="e#163#164#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="45" lean-forward="true" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -450,101 +405,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/sql/SQL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/vsu/sdo/server/Clients.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< Updated upstream
-        <state relative-caret-position="425">
-          <caret line="103" column="64" lean-forward="true" selection-start-line="103" selection-start-column="64" selection-end-line="103" selection-end-column="64" />
-=======
-        <state relative-caret-position="-1173">
-          <caret line="30" column="72" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="72" />
->>>>>>> Stashed changes
+        <state relative-caret-position="274">
+          <caret line="97" column="77" selection-start-line="97" selection-start-column="77" selection-end-line="97" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

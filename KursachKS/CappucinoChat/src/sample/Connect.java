@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Connect{
-    private static final String HOST = "192.168.137.1"; // адрес сервера
+    private static final String HOST = "localhost"; // адрес сервера 192.168.137.1
     private static final int PORT = 4444; // порт
     public Socket clientSocket; // клиентский сокет
 
@@ -35,27 +35,31 @@ public class Connect{
     return Authorization(login,password,null);
     }
     public boolean Authorization(String login, String password, String email) throws IOException {
-        Connecting();
-        DataOutputStream outData = new DataOutputStream(clientSocket.getOutputStream());
-        DataInputStream inData = new DataInputStream(clientSocket.getInputStream());
-        if(email!=null){
-            outData.writeByte(1);
-        } else {
-            outData.writeByte(2);
-        }
-        outData.writeUTF(login);
-        outData.writeUTF(password);
-        outData.flush();
-        while (true){
-            if(inData.readByte()==1){
-                System.out.println("Логин неверен");
-                return false;
+        if(Connecting()) {
+            DataOutputStream outData = new DataOutputStream(clientSocket.getOutputStream());
+            DataInputStream inData = new DataInputStream(clientSocket.getInputStream());
+            if (email != null) {
+                outData.writeByte(2);
+            } else {
+                outData.writeByte(1);
             }
-            else if(inData.readByte()==0){
-                System.out.println("Логин успешен");
-                return true;
+
+            outData.writeUTF(login);
+            outData.writeUTF(password);
+            System.out.println(login+password);
+            outData.flush();
+            while (true) {
+                if (inData.readByte() == 1) {
+                    System.out.println("Логин неверен");
+                    return false;
+                } else if (inData.readByte() == 0) {
+                    System.out.println("Логин успешен");
+                    return true;
+                }
             }
-        }
+        } else {System.out.println("Сервер недоступен");
+        return false;}
+
     }
 
 

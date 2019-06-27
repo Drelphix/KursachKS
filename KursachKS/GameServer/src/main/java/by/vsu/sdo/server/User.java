@@ -2,6 +2,7 @@ package by.vsu.sdo.server;
 
 import by.vsu.sdo.sql.SQL;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class User {
@@ -12,7 +13,7 @@ public class User {
     public String email;
     private String password;
 
-    public boolean auth(String login, String password) {
+  /*  public boolean auth(String login, String password) {
         SQL sqlClient = new SQL();
         try {
             List<String> users = sqlClient.Authorization(login, password);
@@ -21,11 +22,11 @@ public class User {
             this.password = users.get(2);
             this.email = users.get(3);
             this.rights = users.get(4);
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | SQLException e) {
             return false;
         }
         return true;
     }
 
-
+*/
 }
