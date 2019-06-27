@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SQL {
@@ -89,7 +90,7 @@ public class SQL {
     public List<String> Authorization(String login, String password) {
         System.out.println(login+" "+password);
         try {
-            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login+"' AND Password="+password+"");
+            ResultSet rsAuth = this.connection.createStatement().executeQuery("SELECT * FROM authorization WHERE Login='" + login+"' AND Password='"+String.valueOf(password)+"'");
             rsAuth.next();
 
             String dbLogin = rsAuth.getString("Login").toLowerCase();
@@ -119,21 +120,15 @@ public class SQL {
     }
 
     //загрузка старого диалога
-    public List<String[]> GetDialog(String chatName) {
-        List<String[]> chat = new ArrayList<String[]>();
+    public List<String> GetDialog() {
+        List<String> chat = new ArrayList<String>();
         ResultSet rsChatMessages;
         String[] message = new String[3];
         try {
-            rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages LEFT JOIN authorization messages.idUser=authorization.idUser" +
-                    " WHERE (idChat=" + GetChatListDB(chatName).getInt(0));
+            rsChatMessages = connection.createStatement().executeQuery("SELECT * FROM messages");
             do {
-                // Сообщенька
-                message[0] = rsChatMessages.getString(1);
-                // Пользователь
-                message[1] = rsChatMessages.getString(6);
-                // Время
-                message[2] = rsChatMessages.getString(5);
                 rsChatMessages.next();
+                chat.add(rsChatMessages.getString("Message"));
             } while (!rsChatMessages.last());
         } catch (SQLException e) {
             e.printStackTrace();

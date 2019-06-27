@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -84,8 +85,9 @@ public void run() {
     public boolean SendMessage(String message){
         try {
             Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
             outData.writeByte(5);
-            outData.writeUTF(date.toString());
+            outData.writeUTF(formatter.format(date));
             outData.writeUTF(this.userName);
             outData.writeUTF(message);
             outData.flush();
