@@ -225,7 +225,7 @@
                   </Text>
                </children>
             </HBox>
-            <JFXButton fx:id="BackMainForm" onAction="#BackMainForm" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #6c4f3d;" text="Back" textFill="WHITE" />
+            <JFXButton fx:id="BackMainForm" onAction="#BackMainForm" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #6c4f3d;" text="Back" textFill="WHITE" visible="false" />
          </children>
       </VBox>
    </children>

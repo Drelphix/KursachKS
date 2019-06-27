@@ -67,6 +67,7 @@ public class Controller {
 
     @FXML
     void ExitLoginForm(ActionEvent event) {
+        Main.connect.Close();
         Main.primaryStage.show();
         Stage stage = (Stage) ExitLoginForm.getScene().getWindow();
         stage.close();
