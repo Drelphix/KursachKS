@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -25,7 +26,7 @@ public class RegisterController {
     private URL location;
 
     @FXML
-    private JFXButton Login;
+    private JFXButton CreateAccount;
 
     @FXML
     private ImageView PasswordFieldReg1;
@@ -43,35 +44,27 @@ public class RegisterController {
     private TextField LoginField;
 
     @FXML
-    private TextField PasswordField;
+    private JFXButton BackLoginForm;
 
     @FXML
-    private TextField PasswordField1;
+    private PasswordField PasswordField1;
+
+    @FXML
+    private PasswordField PasswordField2;
+
 
     @FXML
     void BackLoginForm(ActionEvent event) {
-        try {
-            blah = FXMLLoader.load(getClass().getResource("Form/LoginForm.fxml"));
-            Scene scene = new Scene(blah, 400, 350);
-            LoginController.NewScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Main.primaryStage.show();
+        Stage stage = (Stage) BackLoginForm.getScene().getWindow();
+        stage.close();
 
-    }
-
-    static void NewScene(Scene scene){
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setResizable(false);
-        Main.primaryStage.hide();
-        stage.show();
     }
 
     @FXML
     void CreateAccount(ActionEvent event) {
         try {
-            if(connect.Authorization(LoginField.getText(), PasswordField.getText(),PasswordField1.getText())){
+            if(connect.Authorization(LoginField.getText(), PasswordField1.getText(),PasswordField2.getText())){
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);
@@ -83,14 +76,16 @@ public class RegisterController {
 
     @FXML
     void initialize() {
-        assert Login != null : "fx:id=\"Login\" was not injected: check your FXML file 'RegisterForm.fxml'.";
+        assert CreateAccount != null : "fx:id=\"CreateAccount\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordFieldReg1 != null : "fx:id=\"PasswordFieldReg1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordFieldReg2 != null : "fx:id=\"PasswordFieldReg2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordFieldRegDone1 != null : "fx:id=\"PasswordFieldRegDone1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordFieldRegDone2 != null : "fx:id=\"PasswordFieldRegDone2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert LoginField != null : "fx:id=\"LoginField\" was not injected: check your FXML file 'RegisterForm.fxml'.";
-        assert PasswordField != null : "fx:id=\"PasswordField\" was not injected: check your FXML file 'RegisterForm.fxml'.";
+        assert BackLoginForm != null : "fx:id=\"BackLoginForm\" was not injected: check your FXML file 'RegisterForm.fxml'.";
+        assert PasswordField2 != null : "fx:id=\"PasswordField2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordField1 != null : "fx:id=\"PasswordField1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
 
     }
 }
+
