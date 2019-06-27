@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class Connect implements Runnable{
@@ -93,16 +95,36 @@ public void run() {
             return false;
         }
     }
-
-    public String Waiting(){
+    public List<String> GetList() {
         Byte wait;
-        String message = null;
-            try {
-                while (true){
+        List<String> list =new ArrayList<>() ;
+        try {
+            outData.writeByte(4);
+            outData.flush();
+            while (true) {
                 wait = inData.readByte();
-                System.out.println(wait);
-                if (wait==5){
-                     message= inData.readUTF();
+                if (wait == 4) {
+                    String line = inData.readUTF();
+                    while (true){
+                        if(!line.equalsIgnoreCase("end")){
+                        System.out.println(line);
+                        list.add(line);
+                        line = inData.readUTF();} else return list;
+
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } return list;
+    }
+    public String Waiting(){
+        Byte wait=null;
+        String message = null;
+        try{
+            while (true) {
+                if (wait == 5) {
+                    message = inData.readUTF();
                     System.out.println(message);
                     break;
                 }

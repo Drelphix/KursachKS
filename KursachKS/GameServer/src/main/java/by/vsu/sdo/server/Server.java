@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Server {
     static final int PORT = 4444;
@@ -44,7 +45,13 @@ public class Server {
             }
         }
     }
-
+    public List<String> SendUserList(){
+        List<String> list = new ArrayList<>();
+        for (Clients man : clients) {
+            list.add(man.user.userName);
+        }
+        return list;
+    }
     // отправляем сообщение всем клиентам
     public void sendMessageToAllClients(String msg) {
 

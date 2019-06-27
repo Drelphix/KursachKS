@@ -140,7 +140,7 @@ public class SQL {
     }
 
     //список доступных чатов
-    public List<String> GetChatList() {
+    /*public List<String> GetChatList() {
         List<String> chatList = new ArrayList<String>();
         ResultSet rsChatList = null;
         try {
@@ -154,5 +154,5 @@ public class SQL {
             e.printStackTrace();
         }
         return chatList;
-    }
+    }*/
 }

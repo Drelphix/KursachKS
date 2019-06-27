@@ -19,7 +19,7 @@ public class Clients implements Runnable {
     private DataOutputStream authMsg;
     private Socket clientSocket = null;
     private SQL sqlServer;
-    private User user;
+    public User user;
 
     // конструктор, который принимает клиентский сокет и сервер
     public Clients(Socket socket, Server server) {
@@ -96,6 +96,10 @@ public class Clients implements Runnable {
 */
             while (true) {
                 wait = auth.readByte();
+
+                if(wait==4) {
+                    sendUserList();
+                }
                 if (wait==5) {
                     String clientMessage = auth.readUTF()+" "+auth.readUTF()+": "+auth.readUTF();
                     System.out.println("Получено сообщение:");
@@ -139,10 +143,21 @@ public class Clients implements Runnable {
     // клиент выходит из чата
     public void close() {
         server.removeClient(this);
-        clients_count--;
-        server.sendMessageToAllClients("Клиентов в чате = " + clients_count);
     }
-
-
-
-}
+    public void sendUserList(){
+        List<String>list=server.SendUserList();
+            System.out.println("Отправка списка пользователей");
+            try {
+                authMsg.writeByte(4);
+                for (String line:list) {
+                    authMsg.writeUTF(line);
+                    System.out.println(line);
+                }
+                System.out.println("Количество пользователей: "+list.size());
+                authMsg.writeUTF("end");
+                authMsg.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
