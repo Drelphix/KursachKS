@@ -86,7 +86,7 @@ public class Connect implements Runnable {
     public boolean SendMessage(String message) {
         try {
             Date date = new Date();
-            SimpleDateFormat formatter = new SimpleDateFormat("dd MMMM yyyy");
+            SimpleDateFormat formatter = new SimpleDateFormat("dd.MM/HH:mm");
             outData.writeByte(5);
             outData.writeUTF(formatter.format(date));
             outData.writeUTF(this.userName);
