@@ -46,5 +46,14 @@
       <JFXButton fx:id="BackLoginForm" layoutX="111.0" layoutY="314.0" onAction="#BackLoginForm" prefHeight="25.0" prefWidth="186.0" ripplerFill="#f6d155" style="-fx-background-color: #f6d155; -fx-background-radius: 8;" text="Back" textFill="WHITE" />
       <PasswordField fx:id="PasswordField1" layoutX="138.0" layoutY="201.0" prefHeight="27.0" prefWidth="157.0" promptText="Password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
       <TextField fx:id="EmailField" layoutX="138.0" layoutY="240.0" prefHeight="27.0" prefWidth="157.0" promptText="Email" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: transparent; -fx-border-color: white; -fx-text-fill: white;" />
+      <AnchorPane fx:id="UsernameUse" layoutX="104.0" layoutY="157.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickMessageUsernameUse" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #ff9100; -fx-background-radius: 8;" visible="false">
+         <children>
+            <Label layoutX="19.0" layoutY="22.0" text="Username already in use" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
