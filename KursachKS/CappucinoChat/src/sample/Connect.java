@@ -35,6 +35,7 @@ public class Connect{
     return Authorization(login,password,null);
     }
     public boolean Authorization(String login, String password, String email) throws IOException {
+        Connecting();
         DataOutputStream outData = new DataOutputStream(clientSocket.getOutputStream());
         DataInputStream inData = new DataInputStream(clientSocket.getInputStream());
         if(email!=null){

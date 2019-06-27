@@ -1,14 +1,22 @@
 package sample;
 
 import com.jfoenix.controls.JFXButton;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class RegisterController {
+    Parent blah = null;
+    Connect connect = new Connect();
 
     @FXML
     private ResourceBundle resources;
@@ -41,8 +49,36 @@ public class RegisterController {
     private TextField PasswordField1;
 
     @FXML
-    void CreateAccount(ActionEvent event) {
+    void BackLoginForm(ActionEvent event) {
+        try {
+            blah = FXMLLoader.load(getClass().getResource("Form/LoginForm.fxml"));
+            Scene scene = new Scene(blah, 400, 350);
+            LoginController.NewScene(scene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
+
+    static void NewScene(Scene scene){
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        Main.primaryStage.hide();
+        stage.show();
+    }
+
+    @FXML
+    void CreateAccount(ActionEvent event) {
+        try {
+            if(connect.Authorization(LoginField.toString(), PasswordField.toString())){
+                blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
+                Scene scene = new Scene(blah, 600, 400);
+                LoginController.NewScene(scene);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
