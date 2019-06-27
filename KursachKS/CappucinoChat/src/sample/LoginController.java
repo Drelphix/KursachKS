@@ -50,7 +50,17 @@ public class LoginController {
 
     @FXML
     void ClickMessageConnection(MouseEvent event) {
-        ConnectionMessage.setVisible(false);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    this.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                ConnectionMessage.setVisible(false);
+            }
+        }.start();
     }
 
     @FXML
@@ -61,7 +71,10 @@ public class LoginController {
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 NewScene(scene);
-            }else{ConnectionMessage.setVisible(true);}
+            }else{
+                ConnectionMessage.setVisible(true);
+                ClickMessageConnection(null);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             connect.Close();

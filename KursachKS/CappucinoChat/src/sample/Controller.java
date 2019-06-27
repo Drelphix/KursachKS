@@ -81,6 +81,7 @@ public class Controller {
         if(Main.connect.SendMessage(message)){
             message=Main.connect.Waiting();
             ListViewMessage.appendText(message);
+            SendMessageTextArea.clear();
         } else ListViewMessage.appendText("!!!Сообщение не было отправлено!!!"+"\n"+message);
 
     }

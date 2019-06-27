@@ -50,7 +50,17 @@ public class RegisterController {
 
     @FXML
     void ClickMessageUsernameUse(MouseEvent event) {
-        UsernameUse.setVisible(false);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    this.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                UsernameUse.setVisible(false);
+            }
+        }.start();
     }
 
     @FXML
@@ -68,7 +78,10 @@ public class RegisterController {
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);
-            }else{UsernameUse.setVisible(true);}
+            }else{
+                UsernameUse.setVisible(true);
+                ClickMessageUsernameUse(null);
+            }
         } catch (IOException e) {
             e.printStackTrace();
 
