@@ -21,10 +21,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         this.primaryStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("Form/LoginForm.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
         primaryStage.setResizable(false);
         primaryStage.setTitle("Cappucino Chat");
-        Scene scene = new Scene(new Group(root), 400, 350);
+        Scene scene = new Scene(new Group(root), 600, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
