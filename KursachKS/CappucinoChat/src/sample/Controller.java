@@ -19,6 +19,12 @@ public class Controller {
     Parent blah = null;
 
     @FXML
+    private JFXButton ExitLoginForm;
+
+    @FXML
+    private JFXButton AboutForm;
+
+    @FXML
     private ResourceBundle resources;
 
     @FXML
@@ -42,6 +48,11 @@ public class Controller {
     @FXML
     void ClearMessageButton(ActionEvent event) {
         SendMessageTextArea.clear();
+    }
+
+    @FXML
+    void AboutForm(ActionEvent event) {
+
     }
 
     @FXML
@@ -74,12 +85,16 @@ public class Controller {
 
 }
 
+
     @FXML
     void initialize() {
+        assert ExitLoginForm != null : "fx:id=\"ExitLoginForm\" was not injected: check your FXML file 'ChatMain.fxml'.";
+        assert AboutForm != null : "fx:id=\"AboutForm\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ListViewMessage != null : "fx:id=\"ListViewMessage\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ListViewUser != null : "fx:id=\"ListViewUser\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageTextArea != null : "fx:id=\"SendMessageTextArea\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert ClearMessageButton != null : "fx:id=\"ClearMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         assert SendMessageButton != null : "fx:id=\"SendMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
+
     }
 }
