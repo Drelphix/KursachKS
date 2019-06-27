@@ -32,15 +32,6 @@ public class RegisterController {
     private ImageView PasswordFieldReg1;
 
     @FXML
-    private ImageView PasswordFieldReg2;
-
-    @FXML
-    private ImageView PasswordFieldRegDone1;
-
-    @FXML
-    private ImageView PasswordFieldRegDone2;
-
-    @FXML
     private TextField LoginField;
 
     @FXML
@@ -50,7 +41,7 @@ public class RegisterController {
     private PasswordField PasswordField1;
 
     @FXML
-    private PasswordField PasswordField2;
+    private TextField EmailField;
 
 
     @FXML
@@ -64,7 +55,7 @@ public class RegisterController {
     @FXML
     void CreateAccount(ActionEvent event) {
         try {
-            if(connect.Authorization(LoginField.getText(), PasswordField1.getText(),PasswordField2.getText())){
+            if(connect.Authorization(LoginField.getText(), PasswordField1.getText(),EmailField.getText())){
                 blah = FXMLLoader.load(getClass().getResource("Form/ChatMain.fxml"));
                 Scene scene = new Scene(blah, 600, 400);
                 LoginController.NewScene(scene);
@@ -78,14 +69,12 @@ public class RegisterController {
     void initialize() {
         assert CreateAccount != null : "fx:id=\"CreateAccount\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordFieldReg1 != null : "fx:id=\"PasswordFieldReg1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
-        assert PasswordFieldReg2 != null : "fx:id=\"PasswordFieldReg2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
-        assert PasswordFieldRegDone1 != null : "fx:id=\"PasswordFieldRegDone1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
-        assert PasswordFieldRegDone2 != null : "fx:id=\"PasswordFieldRegDone2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
+        assert EmailField != null : "fx:id=\"EmailField\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert LoginField != null : "fx:id=\"LoginField\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert BackLoginForm != null : "fx:id=\"BackLoginForm\" was not injected: check your FXML file 'RegisterForm.fxml'.";
-        assert PasswordField2 != null : "fx:id=\"PasswordField2\" was not injected: check your FXML file 'RegisterForm.fxml'.";
         assert PasswordField1 != null : "fx:id=\"PasswordField1\" was not injected: check your FXML file 'RegisterForm.fxml'.";
 
     }
 }
+
 
