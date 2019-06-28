@@ -7,6 +7,7 @@
     <groupId>App</groupId>
     <artifactId>Application</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <build>
         <plugins>
             <plugin>
@@ -17,6 +18,14 @@
                     <target>9</target>
                 </configuration>
             </plugin>
+                    <plugin>
+                        <groupId>com.zenjava</groupId>
+                        <artifactId>javafx-maven-plugin</artifactId>
+                        <version>2.0</version>
+                        <configuration>
+                            <mainClass>by.vsu.sdo.Main</mainClass>
+                        </configuration>
+                    </plugin>
         </plugins>
     </build>
     <dependencies>

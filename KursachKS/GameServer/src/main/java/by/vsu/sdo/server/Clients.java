@@ -45,7 +45,7 @@ public class Clients implements Runnable {
                 if (wait == 1) {
                     String login = auth.readUTF();
                     String password = auth.readUTF();
-                    System.out.println(login + " Пытается подклчиться");
+                    System.out.println(login + " Пытается подключиться");
                     List<String> list = sqlServer.Authorization(login, password);
                     if (list != null) {
                         user.userName = list.get(0);
@@ -100,6 +100,7 @@ public class Clients implements Runnable {
             }
 */
             while (true) {
+
                 wait = auth.readByte();
                 if (wait == 4) sendUserList();
                 if (wait == 5) {

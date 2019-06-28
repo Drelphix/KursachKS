@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextArea;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Ref;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -68,6 +69,25 @@ public class Controller {
 
 
     @FXML
+    void Refresh(){
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    this.sleep(1000);
+                    String message = Main.connect.Waiting();
+                    ListViewMessage.appendText(message);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //UsernameUse.setVisible(false);
+                Refresh();
+            }
+        }.start();
+
+    }
+
+    @FXML
     void SendMessageButton(ActionEvent event) {
         String message = SendMessageTextArea.getText();
 
@@ -109,5 +129,6 @@ public class Controller {
         assert SendMessageButton != null : "fx:id=\"SendMessageButton\" was not injected: check your FXML file 'ChatMain.fxml'.";
         GetChatList();
         GetMessageList();
+        Refresh();
     }
 }

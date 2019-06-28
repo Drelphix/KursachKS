@@ -129,14 +129,14 @@ public class Connect implements Runnable {
         Byte wait = null;
         String message = null;
         try {
-            while (true) {
                 wait = inData.readByte();
                 if (wait == 5) {
                     message = inData.readUTF();
                     System.out.println(message);
-                    break;
                 }
-            }
+                if (wait==4){
+                    message="update";
+                }
         } catch (IOException e) {
             e.printStackTrace();
         }
